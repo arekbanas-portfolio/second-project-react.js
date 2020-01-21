@@ -1,0 +1,45 @@
+.weather-app {
+    input {
+        text-align: center;
+        color: #fff;
+    }
+    &__result {
+        padding: 10px;
+        .loader {
+            margin: 200px 0 0 0;
+        }
+    }
+    &__icon {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -20%);
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        h2 {
+            font-size: $small-device-h2 / 1.5;
+            font-weight: $normal-font;
+            border-bottom: none;
+            margin: 20px 0 45px 0;
+            width: 100%;
+        }
+        div {
+            min-width: 50%;
+            padding: 5px 0;
+            h3 {
+                font-size: $small-device-h3 / 1.4;
+                font-weight: $normal-font;
+            }
+            h4 {
+                color: #5cb85c;
+                font-weight: inherit;
+                font-size: $small-device-h3 / 1.6;
+            }
+        }
+    }
+}

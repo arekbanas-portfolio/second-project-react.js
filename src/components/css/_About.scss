@@ -1,0 +1,78 @@
+main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 235px 100px;
+    .my-image {
+        background-image: url(../images/me.jpg);
+        margin: 2vh 10vh auto auto;
+        width: 150px;
+        height: 150px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        transition: 1s ease;
+        opacity: 0;
+        z-index: 1000;
+        position: relative;
+        transform: translateX(10px);
+        &.active {
+            opacity: 1;
+            box-shadow: -15px 0px 20px 5px rgba(0,0,0,0.6);
+            transform: translateX(0);
+        }
+        .border-image {
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+            width: 250px;
+            height: 5px;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(50px);
+            border-radius: 10px;
+            transition: 1s ease;
+            transition-delay: .1s;
+            &.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0px);
+            }
+        }
+
+    }
+    .type-writer {
+        font-size: 1.1rem;
+        letter-spacing: $letter-spacing;
+        margin: 3vh 5%;
+        opacity: 0;
+        transform: translateY(-50%);
+        &.active {
+            opacity: 1;
+            transform: translateZ(0px);
+        }
+    }
+    .first-project {
+        background-image: $gradient;
+        text-align: center;
+        margin: 20px auto 35px auto;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: inline-block;
+        a {
+            text-decoration: none;
+            color:#fff;
+            font-size: $small-device-h2 / 2;
+            letter-spacing: $letter-spacing;
+        }
+    }
+}
+
+.cursor {
+    opacity: 0;
+    transition: .2s;
+    &.active {
+        opacity: 1;
+    }
+}

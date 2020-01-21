@@ -1,0 +1,242 @@
+@media (min-width: 576px) {
+    .header {
+        h2 {
+            margin-top: 20vh;
+        }
+    }
+    .nav-container {
+        .main-nav {
+            li {
+                padding: 10px 0;
+            }
+        }
+    }
+    main {
+        width: 95%;
+        margin: 0 auto;
+        grid-template-rows: 200px 160px 100px;
+    }
+    .technologies-container {
+        height: 60vh;
+    }
+    .applications .card {
+        width: 60%;
+    }
+    .footer {
+        &__cloud-first {
+            left: 20%;
+        }
+        &__cloud-second {
+            right: 20%;
+        }
+    }
+    .recipe-app {
+        &__search {
+            form {
+                input {
+                    width: 40%;
+                }
+            }
+        }
+        &__recipes {
+            .recipe {
+                width: 40%;
+            }
+        }
+    }
+    .active-recipe {
+        .recipe {
+            width: 80%;
+            img {
+                width: 60%;
+            }
+            p {
+                padding: 15px;
+            }
+        }
+        .ingredients {
+            &__ingredient {
+                width: 25%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        background-image: url(../images/path.jpg);
+    }
+    .hamburger {
+        display: none;
+    }
+    .nav-container {
+        opacity: 1;
+        z-index: 10000;
+        .main-nav {
+            height: 0;
+            .border {
+                display: none;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                height: 60px;
+                width: 100%;
+                background-image: $gradient;
+                clip-path: polygon(25% 0, 100% 0, 100% 100%, 35% 100%, 25% 40%);
+                filter: blur(10px);
+                opacity: .5;
+            }
+            .menu {
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            li {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+                font-size: $small-device-h3 / 1.5;
+                padding: 0 20px;
+                line-height: 60px;
+                letter-spacing: $letter-spacing;
+                z-index: 1;
+                &.active {
+                    transform: translateY(0);
+                }
+                &:nth-of-type(1) {
+                    display: none;
+                }
+                & > .active {
+                    font-size: $small-device-h3 / 2 !important;
+                    opacity: .4;
+                    pointer-events: none;
+                    }
+            }
+        }
+    }
+    .technologies-container {
+        height: 30vh;
+    }
+    
+    .applications {
+        align-items: flex-start;
+        &__title {
+            h2 {
+                margin-bottom: 5px;
+            }
+        }
+        .card {
+            width: 45%;
+            margin: 35px 15px;
+        }
+    }
+    .footer {
+        background-image: url(../images/threes.jpg);
+    }
+    .recipe-app {
+        &__search {
+            form {
+                input {
+                    width: 30%;
+                }
+            }
+        }
+        &__recipes {
+            .recipe {
+                width: 30%;
+            }
+        }
+    }
+    .active-recipe {
+        .ingredients {
+            &__ingredient {
+                width: 22%;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+        h2 {
+            margin-top: 30vh;
+            font-size: $desktop-h2;
+        }
+        h3 {
+            font-size: $desktop-h3;
+        }
+    }
+    .nav-container {
+        .main-nav {
+            &::after {
+                clip-path: polygon(45% 0, 100% 0, 100% 100%, 55% 100%, 45% 40%);
+            }
+            li {
+                padding: 0 30px;
+            }
+        } 
+    }
+    main {
+        grid-template-rows: 200px 120px 100px; 
+    }
+    .about-container {
+        width: 70%;
+    }
+    .technologies-container {
+        height: 45vh;
+    }
+    .applications {
+        width: 70%;
+    }
+    .form-contact-wrapper {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .footer {
+        background-image: url(../images/threes.jpg);
+        &__cloud {
+            width: 200px;
+            height: 131px;
+        }
+        &__cloud-first {
+            left: 30%;
+        }
+        &__cloud-second {
+            right: 30%;
+        }
+    }
+    .footer-content {
+        h2 {
+            font-size: $desktop-h2;
+        }
+        h5 {
+            font-size: $desktop-h2 / 2;
+        }
+    }
+    .recipe-app {
+        &__search {
+            form {
+                input {
+                    width: 20%;
+                }
+            }
+        }
+        &__recipes {
+            .recipe {
+                width: 20%;
+            }
+        }
+    }
+    .active-recipe {
+        .recipe {
+            width: 50%;
+        }
+        .ingredients {
+            &__ingredient {
+                width: 15%;
+            }
+        }
+    }
+}
