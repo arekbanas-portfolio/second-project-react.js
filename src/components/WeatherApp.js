@@ -32,7 +32,7 @@ handleInputChange = (e) => {
 handleCitySubmit = (e) => {
     e.preventDefault();
     const APIkey = 'c088de3f8e5b557ade3694c89f7738f4'
-    const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&APPID=${APIkey}&units=metric`
+    const API = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&APPID=${APIkey}&units=metric`
 
     fetch(API)
     .then(response => {
@@ -90,7 +90,7 @@ handleCitySubmit = (e) => {
             const temperature_min = Math.floor(temp_min);
             const temperature_max = Math.floor(temp_max);
             const windSpeed = Math.floor(wind * 3.6);
-            const iconurl = `http://openweathermap.org/img/w/${icon}.png`;
+            const iconurl = `https://openweathermap.org/img/w/${icon}.png`;
 
             content = (
                 <div>
