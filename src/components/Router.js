@@ -5,7 +5,9 @@ import RecipeApp from './RecipeApp';
 import Recipe from './Recipe';
 
 const Router = () => {
-    return ( 
+    return (
+        <>
+        <h2>OK</h2>
         <BrowserRouter basename="{process.env.PUBLIC_URL}">
             <Switch>
                 <Route path="/" exact component={App}/>
@@ -13,6 +15,7 @@ const Router = () => {
                 <Route path="/recipe/:id" component={Recipe}/>
             </Switch>
         </BrowserRouter>
+        </>
      );
 }
  
