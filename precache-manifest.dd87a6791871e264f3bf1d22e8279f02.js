@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "70516acc482aa5af0d69734c29f64e6d",
+    "revision": "59ad26824a6210beb55dc05a587409f8",
     "url": "/second-project-react.js/index.html"
   },
   {
-    "revision": "aa21003f771dc952dc89",
+    "revision": "fb8007bfbc6a39babd2e",
     "url": "/second-project-react.js/static/css/main.901b57f5.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/second-project-react.js/static/js/2.143704fc.chunk.js"
   },
   {
-    "revision": "aa21003f771dc952dc89",
-    "url": "/second-project-react.js/static/js/main.d9951943.chunk.js"
+    "revision": "fb8007bfbc6a39babd2e",
+    "url": "/second-project-react.js/static/js/main.01cbf0f7.chunk.js"
   },
   {
     "revision": "822dbab24a592405c023",
