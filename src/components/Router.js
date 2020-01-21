@@ -6,7 +6,7 @@ import Recipe from './Recipe';
 
 const Router = () => {
     return ( 
-        <BrowserRouter>
+        <BrowserRouter basename="{process.env.PUBLIC_URL}">
             <Switch>
                 <Route path="/" exact component={App}/>
                 <Route path="/recipe-app" component={RecipeApp}/>
