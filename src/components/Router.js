@@ -8,7 +8,7 @@ const Router = () => {
     return (
         <>
         <h2>OK</h2>
-        <BrowserRouter basename="{process.env.PUBLIC_URL}">
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
                 <Route path="/" exact component={App}/>
                 <Route path="/recipe-app" component={RecipeApp}/>
