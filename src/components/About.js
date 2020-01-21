@@ -72,7 +72,6 @@ class About extends Component {
                   <span className={active ? 'cursor active' : 'cursor'}>{cursor}</span>
                 </div>
                 <div className="first-project"><a href="http://www.arekbanas-portfolio.cba.pl">PIERWSZY PROJEKT (jQuery)</a></div>
-                ok
             </main>
         );
     }
