@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {TimelineLite, Power1} from 'gsap/all';
+import {TimelineLite, Power1} from 'gsap/dist/gsap';
 
 class Footer extends Component {
     constructor(props) {
