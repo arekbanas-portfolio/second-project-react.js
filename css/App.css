@@ -920,7 +920,7 @@ main .my-image .border-image.active {
 }
 
 main .type-writer {
-  font-size: 1.1rem;
+  font-size: 18px;
   letter-spacing: 0.1rem;
   margin: 3vh 5%;
   opacity: 0;
