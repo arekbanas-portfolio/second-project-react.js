@@ -43,14 +43,12 @@ main {
 
     }
     .type-writer {
-        font-size: 18px;
+        font-size: 17px;
         letter-spacing: $letter-spacing;
         margin: 3vh 5%;
         opacity: 0;
-        transform: translateY(-50%);
         &.active {
             opacity: 1;
-            transform: translateZ(0px);
         }
     }
     .first-project {

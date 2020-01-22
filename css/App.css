@@ -920,18 +920,14 @@ main .my-image .border-image.active {
 }
 
 main .type-writer {
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 0.1rem;
   margin: 3vh 5%;
   opacity: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 main .type-writer.active {
   opacity: 1;
-  -webkit-transform: translateZ(0px);
-          transform: translateZ(0px);
 }
 
 main .first-project {
