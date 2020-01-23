@@ -1170,8 +1170,10 @@ main .first-project a {
   padding: 10px;
   border-radius: 10px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  -webkit-box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #ffffff;
-          box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #ffffff;
+  -webkit-box-shadow: 5px 5px 10px #c2c2c2, 
+ -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #c2c2c2, 
+ -5px -5px 10px #ffffff;
 }
 
 .active-recipe .ingredients {
@@ -1197,8 +1199,10 @@ main .first-project a {
   width: 30%;
   margin: 10px 5px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  -webkit-box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #ffffff;
-          box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #ffffff;
+  -webkit-box-shadow: 5px 5px 10px #c2c2c2, 
+ -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #c2c2c2, 
+ -5px -5px 10px #ffffff;
 }
 
 .active-recipe .ingredients__ingredient h5 {
@@ -1357,12 +1361,12 @@ textarea {
 }
 
 .footer__cloud-first {
-  left: 0;
+  left: 5%;
   top: 50px;
 }
 
 .footer__cloud-second {
-  right: 0;
+  right: 5%;
   top: 60px;
   z-index: 1;
 }
