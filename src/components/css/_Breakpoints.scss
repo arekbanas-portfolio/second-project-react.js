@@ -1,4 +1,4 @@
-@media (min-width: 576px) {
+@media only screen and (min-width: 576px) and (-webkit-min-device-pixel-ratio: 2) {
     .header {
         h2 {
             margin-top: 20vh;
