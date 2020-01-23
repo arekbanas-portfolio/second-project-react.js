@@ -3,6 +3,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 235px 100px;
+    background-color: #fff;
     .my-image {
         background-image: url(../images/me.jpg);
         margin: 2vh 10vh auto auto;

@@ -1,12 +1,20 @@
 .header {
-    background-image: url(../images/path-small.jpg);
     height: 100vh;
     width: 100%;
-    background-position: 30% 50%;
-    background-size: cover;
-    background-attachment: fixed;
     position: relative;
     overflow: hidden;
+    &::after {
+        content: "";
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: url(../images/path-small.jpg);
+        background-position: 30% 50%;
+        background-size: cover;
+        z-index: -1;
+    }
     h2, h3 {
         @include white-fontstyle;
         text-align: center;

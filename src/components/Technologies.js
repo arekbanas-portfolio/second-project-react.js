@@ -55,13 +55,15 @@ class Technologies extends Component {
         const {cursor, active} = this.state;
 
         return ( 
-            <section className="technologies-container">
-                <h2>Technolgie:</h2>
-                <h3>{this.state.show}
-                <span className={active ? 'cursor active' : 'cursor'}>{cursor}</span>
-                </h3>
-                <video src={BackgroundVideo} autoPlay loop playsInline muted>
-                </video>
+            <section>
+                <div className="technologies-container">
+                    <h2>Technolgie:</h2>
+                    <h3>{this.state.show}
+                    <span className={active ? 'cursor active' : 'cursor'}>{cursor}</span>
+                    </h3>
+                    <video src={BackgroundVideo} autoPlay loop playsInline muted>
+                    </video>
+                </div>
             </section>
          );
     }

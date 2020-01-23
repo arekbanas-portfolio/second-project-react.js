@@ -1,14 +1,13 @@
 .form-contact-wrapper {
     filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.6));
     z-index: 2;
+    padding: 20px 0 50px 0;
 }
 
 .form-contact {
     @include flex-center;
     background-image: $gradient;
     clip-path: polygon(0 12.5%, 100% 0, 100% 87.5%, 0% 100%);
-    margin-top: 20px;
-    padding-bottom: 20px;
     color: rgba(255,255,255,.5);
     h2 {
         @include h2-title;
@@ -81,7 +80,6 @@ textarea {
 }
 
 .contact-waves {
-    margin: 50px 0;
     position: relative;
     transform: rotate(180deg);
     z-index: 1;
