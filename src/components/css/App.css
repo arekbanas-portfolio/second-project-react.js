@@ -700,8 +700,8 @@ main .my-image .border-image {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
   border-radius: 10px;
   -webkit-transition: 1s ease;
   transition: 1s ease;
@@ -1361,12 +1361,12 @@ textarea {
 }
 
 .footer__cloud-first {
-  left: 5%;
+  left: -5%;
   top: 50px;
 }
 
 .footer__cloud-second {
-  right: 5%;
+  right: -5%;
   top: 60px;
   z-index: 1;
 }
