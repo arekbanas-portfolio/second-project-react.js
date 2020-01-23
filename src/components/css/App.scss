@@ -1,8 +1,4 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+@import 'Normalize';
 
 html {
     font-family: 'Open Sans', sans-serif;
@@ -12,7 +8,6 @@ html {
     width: 100%;
 }
 
-@import 'Normalize';
 @import 'Variables';
 @import 'Breakpoints';
 @import 'Navigation';
