@@ -7,6 +7,7 @@ class Footer extends Component {
             this.cloudFirst = null;
             this.cloudSecond = null;
             this.lightning = null;
+            this.tl = new TimelineLite({paused: true});
 
             this.state = {
                 active: false
@@ -23,8 +24,6 @@ class Footer extends Component {
 
     animate = () => {
         const footerSection = document.querySelector('.footer')
-
-        this.tl = new TimelineLite({paused: true});
         
         this.tl.add('run');
         this.tl.to(this.cloudFirst, 3, {x: 150, y: 3, ease: Power1.easeInOut});
@@ -39,7 +38,7 @@ class Footer extends Component {
         this.tl.to(this.lightning, 1, {opacity: 0, delay: -1.7},);
 
         if ((window.innerWidth >= 768 && window.innerWidth <= 992) && window.scrollY > footerSection.offsetTop -600 || window.scrollY > footerSection.offsetTop - 400) {
-            this.tl.play();
+            this.tl.resume();
             this.setState({
                 active: true
             })
