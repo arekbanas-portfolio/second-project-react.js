@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Header = () => {
+const Header = (props) => {
     return (
-        <header className="header">
+        <header onChange={props.opacity} className="header">
             <h2>Arkadiusz Banaś</h2>
             <h3>Junior Front-End Developer</h3>
                 <ul className="header__socials">

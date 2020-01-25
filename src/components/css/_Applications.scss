@@ -36,6 +36,7 @@
                 cursor: pointer;
                 transform: translateY(35px);
                 box-shadow: 0 20px 30px rgba(0,0,0,0.6);
+                overflow-x: hidden;
                 &.active {
                     transform: translateY(0);
                     box-shadow: none;
@@ -49,7 +50,7 @@
                 padding: 20px;
                 transform: translateY(-35px);
                 opacity: 0;
-                overflow: hidden;
+                overflow-x: hidden;
                 &.active {
                     transform: translateY(0);
                     opacity: 1;

@@ -12,7 +12,7 @@ main {
         background-position: center;
         background-size: cover;
         border-radius: 50%;
-        transition: 1s ease;
+        transition: all 1s ease-in-out;
         opacity: 0;
         z-index: 1000;
         position: relative;
@@ -33,12 +33,12 @@ main {
             visibility: hidden;
             transform: translateX(30px);
             border-radius: 10px;
-            transition: 1s ease;
-            transition-delay: .1s;
+            transition: all 1s ease-in-out;
+            transition-delay: -.1s;
             &.active {
                 opacity: 1;
                 visibility: visible;
-                transform: translateX(0px);
+                transform: translateX(0);
             }
         }
 
@@ -70,7 +70,7 @@ main {
 
 .cursor {
     opacity: 0;
-    transition: .2s;
+    transition: .2s ease-in-out;
     &.active {
         opacity: 1;
     }
