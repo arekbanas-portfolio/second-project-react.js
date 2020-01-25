@@ -15,7 +15,7 @@ class About extends Component {
       
     componentDidMount() {
       window.addEventListener('scroll', this.addSection);
-      this.typeWriter = setInterval(this.addLetter, 20);
+      this.typeWriter = setInterval(this.addLetter, 30);
       this.cursorTyping = setInterval(this.cursorAnimation, 500);
     }
       
