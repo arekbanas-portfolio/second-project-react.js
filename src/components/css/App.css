@@ -951,6 +951,7 @@ section .technologies-container h3 {
 .weather-app input {
   text-align: center;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .weather-app__result {
@@ -1058,6 +1059,7 @@ section .technologies-container h3 {
   -webkit-box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #ffffff;
           box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #ffffff;
   text-shadow: none;
+  overflow-x: hidden;
 }
 
 .recipe-app__center-btn {
