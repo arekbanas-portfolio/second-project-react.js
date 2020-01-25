@@ -20,7 +20,8 @@
                 text-align: center;
                 width: 45%;
                 margin: 0 5px;
-                box-shadow: 5px 2px 15px rgba(0,0,0,0.4);
+                box-shadow: 5px 5px 10px #c2c2c2, 
+                            -5px -5px 10px #ffffff;
                 text-shadow: none;
             }
         }
@@ -51,7 +52,8 @@
         text-align: center;
         .recipe {
             margin: 5px 10px 30px 10px;
-            box-shadow: 5px 2px 15px rgba(0,0,0,0.4);
+            box-shadow: 5px 5px 10px #c2c2c2, 
+                        -5px -5px 10px #ffffff;
             border-radius: 5px;
             width: 80%;
             &__error {

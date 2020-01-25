@@ -1,12 +1,11 @@
 main {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 235px 100px;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     .my-image {
         background-image: url(../images/me.jpg);
-        margin: 2vh 10vh auto auto;
+        margin: 30px 50px 25px auto;
         width: 150px;
         height: 150px;
         background-position: center;
@@ -48,6 +47,7 @@ main {
         letter-spacing: $letter-spacing;
         margin: 3vh 5%;
         opacity: 0;
+        min-height: 250px;
         &.active {
             opacity: 1;
         }

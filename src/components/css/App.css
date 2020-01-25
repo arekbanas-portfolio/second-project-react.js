@@ -207,11 +207,20 @@ html {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  opacity: 1;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  position: fixed;
   background-image: url(../images/path-small.jpg);
   background-position: 30% 50%;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .header h2, .header h3 {
@@ -659,18 +668,19 @@ html {
 
 main {
   position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 200px 235px 100px;
-      grid-template-rows: 200px 235px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #fff;
 }
 
 main .my-image {
   background-image: url(../images/me.jpg);
-  margin: 2vh 10vh auto auto;
+  margin: 30px 50px 25px auto;
   width: 150px;
   height: 150px;
   background-position: center;
@@ -724,6 +734,7 @@ main .type-writer {
   letter-spacing: 0.1rem;
   margin: 3vh 5%;
   opacity: 0;
+  min-height: 250px;
 }
 
 main .type-writer.active {
@@ -1044,8 +1055,8 @@ section .technologies-container h3 {
   text-align: center;
   width: 45%;
   margin: 0 5px;
-  -webkit-box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.4);
-          box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #ffffff;
   text-shadow: none;
 }
 
@@ -1093,8 +1104,8 @@ section .technologies-container h3 {
 
 .recipe-app__recipes .recipe {
   margin: 5px 10px 30px 10px;
-  -webkit-box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.4);
-          box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #ffffff;
   border-radius: 5px;
   width: 80%;
 }
@@ -1488,40 +1499,20 @@ textarea {
 }
 
 @media (min-width: 576px) {
-  .header {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
-    opacity: 1;
-  }
-  .header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    position: fixed;
-    background-image: url(../images/path-small.jpg);
-    background-position: 30% 50%;
-    background-size: cover;
-  }
   .header h2 {
     margin-top: 20vh;
   }
   .nav-container .main-nav li {
     padding: 10px 0;
   }
-  main {
-    width: 95%;
-    margin: 0 auto;
-    -ms-grid-rows: 200px 160px 100px;
-        grid-template-rows: 200px 160px 100px;
+  main .my-image {
+    margin: 30px 150px 25px auto;
   }
-  .technologies-container {
+  main .type-writer {
+    margin: 3vh 15%;
+    min-height: 165px;
+  }
+  section .technologies-container {
     height: 60vh;
   }
   .applications .card {
@@ -1554,7 +1545,7 @@ textarea {
 }
 
 @media (min-width: 768px) {
-  .header {
+  .header::before {
     background-image: url(../images/path.jpg);
   }
   .hamburger {
@@ -1577,8 +1568,7 @@ textarea {
     right: 0;
     height: 60px;
     width: 100%;
-    background-image: radial-gradient(circle at 33% 41%, rgba(250, 250, 250, 0.03) 0%, rgba(250, 250, 250, 0.03) 50%, rgba(37, 37, 37, 0.03) 50%, rgba(37, 37, 37, 0.03) 100%), radial-gradient(circle at 76% 49%, rgba(28, 28, 28, 0.03) 0%, rgba(28, 28, 28, 0.03) 50%, rgba(187, 187, 187, 0.03) 50%, rgba(187, 187, 187, 0.03) 100%), radial-gradient(circle at 41% 99%, rgba(247, 247, 247, 0.03) 0%, rgba(247, 247, 247, 0.03) 50%, rgba(120, 120, 120, 0.03) 50%, rgba(120, 120, 120, 0.03) 100%), radial-gradient(circle at 66% 27%, rgba(17, 17, 17, 0.03) 0%, rgba(17, 17, 17, 0.03) 50%, rgba(156, 156, 156, 0.03) 50%, rgba(156, 156, 156, 0.03) 100%), -webkit-gradient(linear, left bottom, left top, from(#125158), to(#276563));
-    background-image: radial-gradient(circle at 33% 41%, rgba(250, 250, 250, 0.03) 0%, rgba(250, 250, 250, 0.03) 50%, rgba(37, 37, 37, 0.03) 50%, rgba(37, 37, 37, 0.03) 100%), radial-gradient(circle at 76% 49%, rgba(28, 28, 28, 0.03) 0%, rgba(28, 28, 28, 0.03) 50%, rgba(187, 187, 187, 0.03) 50%, rgba(187, 187, 187, 0.03) 100%), radial-gradient(circle at 41% 99%, rgba(247, 247, 247, 0.03) 0%, rgba(247, 247, 247, 0.03) 50%, rgba(120, 120, 120, 0.03) 50%, rgba(120, 120, 120, 0.03) 100%), radial-gradient(circle at 66% 27%, rgba(17, 17, 17, 0.03) 0%, rgba(17, 17, 17, 0.03) 50%, rgba(156, 156, 156, 0.03) 50%, rgba(156, 156, 156, 0.03) 100%), linear-gradient(0deg, #125158, #276563);
+    background-color: rgba(0, 0, 0, 0.4);
     -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 35% 100%, 25% 40%);
             clip-path: polygon(25% 0, 100% 0, 100% 100%, 35% 100%, 25% 40%);
     -webkit-filter: blur(10px);
@@ -1617,8 +1607,11 @@ textarea {
     opacity: .4;
     pointer-events: none;
   }
-  .technologies-container {
-    height: 30vh;
+  main .type-writer {
+    min-height: 140px;
+  }
+  section .technologies-container {
+    height: 250px;
   }
   .applications {
     -webkit-box-align: start;
@@ -1647,6 +1640,20 @@ textarea {
 }
 
 @media (min-width: 992px) {
+  .header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-image: url(../images/path.jpg);
+    background-position: 30% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .header::before {
+    display: none;
+  }
   .header h2 {
     margin-top: 30vh;
     font-size: 2rem;
@@ -1661,9 +1668,18 @@ textarea {
   .nav-container .main-nav li {
     padding: 0 30px;
   }
+  .desktop-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    -webkit-box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #c2c2c2;
+            box-shadow: 5px 5px 10px #c2c2c2,  -5px -5px 10px #c2c2c2;
+  }
   main {
-    -ms-grid-rows: 200px 120px 100px;
-        grid-template-rows: 200px 120px 100px;
+    margin: 0 auto;
+  }
+  main .type-writer {
+    margin: 3vh 0;
+    min-height: 115px;
   }
   .about-container {
     width: 70%;
@@ -1672,7 +1688,7 @@ textarea {
     height: 45vh;
   }
   .applications {
-    width: 70%;
+    width: 80%;
   }
   .form-contact-wrapper {
     width: 70%;

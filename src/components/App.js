@@ -31,15 +31,13 @@ class App extends Component {
   }
 
   changeOpacity = (props) => {
-    const header = document.querySelector(".header");
-    let scrollPosition = window.scrollY / 2;
-    const height = header.clientHeight;
-    const offset = height / 2;
-    const range = 250;
-    let calc = 1 - (scrollPosition - offset + range) / range;
+    const header = document.querySelector("header");
+    let scrollPosition = window.scrollY;
+    const height = header.offsetHeight;
+    let calc = 1 - scrollPosition / height;
 
     header.style.opacity = calc;
-    
+
     if (calc > 1) {
       header.style.opacity = 1;
     } else if (calc < 0) {
@@ -60,27 +58,27 @@ class App extends Component {
         <nav>
           {<Navigation click={this.toggleHamburger} active={this.state.active}/>}
         </nav>
-        <div>
-          <header>
-            {<Header opacity={this.changeOpacity}/>}
-          </header>
-          <main>
-            {<About/>}
-          </main>
-          <section>
-            {<Technologies/>}
-          </section>
-          <section>
-            {<Applications/>}
-          </section>
-          <section>
-            {<Contact/>}
-          </section>
-          <footer>
-            {<Footer/>}
-          </footer>
-          </div>
-        </div>}
+        <header>
+          {<Header opacity={this.changeOpacity}/>}
+        </header>
+        <div className="desktop-wrapper">
+        <main>
+          {<About/>}
+        </main>
+        <section>
+          {<Technologies/>}
+        </section>
+        <section>
+          {<Applications/>}
+        </section>
+        <section>
+          {<Contact/>}
+        </section>
+        <footer>
+          {<Footer/>}
+        </footer>
+        </div>
+      </div>}
       </>
     )
   }

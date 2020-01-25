@@ -37,7 +37,7 @@ class Footer extends Component {
         this.tl.to(this.lightning, 1, {opacity: .4, delay: 2}, 'run');
         this.tl.to(this.lightning, 1, {opacity: 0, delay: -1.7},);
 
-        if ((window.innerWidth >= 768 && window.innerWidth <= 992) && window.scrollY > footerSection.offsetTop -600 || window.scrollY > footerSection.offsetTop - 430) {
+        if ((window.innerWidth >= 768 && window.innerWidth <= 992) && window.scrollY > footerSection.offsetTop -600 || (window.scrollY > footerSection.offsetTop - 420 || window.scrollY > footerSection.offsetTop - 500)) {
             this.tl.resume();
             this.setState({
                 active: true

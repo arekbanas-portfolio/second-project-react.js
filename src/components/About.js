@@ -4,7 +4,7 @@ class About extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          text: 'Witam, mam na imię Arek. Chciałbym zacząć prację jako Junior Front-End Developer. Jest to mój drugi projekt wykonany przy użyciu biblioteki React. Jeżeli zainteresował Cię mój projekt zapraszam do kontaktu. Pozdrawiam.',
+          text: 'Witam, mam na imię Arek. Chciałbym zacząć prację jako Junior Front-End Developer. Jest to mój drugi projekt wykonany przy użyciu biblioteki React. W niedalekiej przyszłości, myślę zrobić tą stronę dwujęzyczna, oraz oczywiście dołożyć nowe aplikacje. Jeżeli zainteresował Cię mój projekt zapraszam do kontaktu. Pozdrawiam.',
           index: 0,
           show: '',
           cursor: '|',
@@ -15,7 +15,7 @@ class About extends Component {
       
     componentDidMount() {
       window.addEventListener('scroll', this.addSection);
-      this.typeWriter = setInterval(this.addLetter, 30);
+      this.typeWriter = setInterval(this.addLetter, 20);
       this.cursorTyping = setInterval(this.cursorAnimation, 500);
     }
       
