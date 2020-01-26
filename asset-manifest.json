@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/second-project-react.js/static/css/main.012c1cf2.chunk.css",
-    "main.js": "/second-project-react.js/static/js/main.de8ed0d9.chunk.js",
-    "main.js.map": "/second-project-react.js/static/js/main.de8ed0d9.chunk.js.map",
+    "main.css": "/second-project-react.js/static/css/main.0c06449f.chunk.css",
+    "main.js": "/second-project-react.js/static/js/main.1bf448ed.chunk.js",
+    "main.js.map": "/second-project-react.js/static/js/main.1bf448ed.chunk.js.map",
     "runtime~main.js": "/second-project-react.js/static/js/runtime~main.f2305d6e.js",
     "runtime~main.js.map": "/second-project-react.js/static/js/runtime~main.f2305d6e.js.map",
     "static/js/2.9900ce21.chunk.js": "/second-project-react.js/static/js/2.9900ce21.chunk.js",
     "static/js/2.9900ce21.chunk.js.map": "/second-project-react.js/static/js/2.9900ce21.chunk.js.map",
     "index.html": "/second-project-react.js/index.html",
-    "precache-manifest.e75044aebe17fea2ee14206dc1d4f6c8.js": "/second-project-react.js/precache-manifest.e75044aebe17fea2ee14206dc1d4f6c8.js",
+    "precache-manifest.e80924ce67846d2a48f55763bc3a419b.js": "/second-project-react.js/precache-manifest.e80924ce67846d2a48f55763bc3a419b.js",
     "service-worker.js": "/second-project-react.js/service-worker.js",
-    "static/css/main.012c1cf2.chunk.css.map": "/second-project-react.js/static/css/main.012c1cf2.chunk.css.map",
+    "static/css/main.0c06449f.chunk.css.map": "/second-project-react.js/static/css/main.0c06449f.chunk.css.map",
     "static/media/Forest.mp4": "/second-project-react.js/static/media/Forest.f6960cf4.mp4",
     "static/media/App.css": "/second-project-react.js/static/media/threes.017d8430.jpg"
   }
