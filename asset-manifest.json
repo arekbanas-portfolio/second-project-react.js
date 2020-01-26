@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/second-project-react.js/static/css/main.f6494c32.chunk.css",
+    "main.css": "/second-project-react.js/static/css/main.012c1cf2.chunk.css",
     "main.js": "/second-project-react.js/static/js/main.de8ed0d9.chunk.js",
     "main.js.map": "/second-project-react.js/static/js/main.de8ed0d9.chunk.js.map",
     "runtime~main.js": "/second-project-react.js/static/js/runtime~main.f2305d6e.js",
@@ -8,9 +8,9 @@
     "static/js/2.9900ce21.chunk.js": "/second-project-react.js/static/js/2.9900ce21.chunk.js",
     "static/js/2.9900ce21.chunk.js.map": "/second-project-react.js/static/js/2.9900ce21.chunk.js.map",
     "index.html": "/second-project-react.js/index.html",
-    "precache-manifest.8280fec528ca6264cef5a9e7751b6588.js": "/second-project-react.js/precache-manifest.8280fec528ca6264cef5a9e7751b6588.js",
+    "precache-manifest.e75044aebe17fea2ee14206dc1d4f6c8.js": "/second-project-react.js/precache-manifest.e75044aebe17fea2ee14206dc1d4f6c8.js",
     "service-worker.js": "/second-project-react.js/service-worker.js",
-    "static/css/main.f6494c32.chunk.css.map": "/second-project-react.js/static/css/main.f6494c32.chunk.css.map",
+    "static/css/main.012c1cf2.chunk.css.map": "/second-project-react.js/static/css/main.012c1cf2.chunk.css.map",
     "static/media/Forest.mp4": "/second-project-react.js/static/media/Forest.f6960cf4.mp4",
     "static/media/App.css": "/second-project-react.js/static/media/threes.017d8430.jpg"
   }
