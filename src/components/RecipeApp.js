@@ -78,7 +78,8 @@ class RecipeApp extends Component {
                     </div>
                 </form>
             </div>
-            {loader ? <SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/> : <div className="recipe-app__recipes">
+            {loader ? <div className="recipes-loader">
+                <SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/></div> : <div className="recipe-app__recipes">
                 {recipes.map(recipe => {
                     if (!error) {
                         return (

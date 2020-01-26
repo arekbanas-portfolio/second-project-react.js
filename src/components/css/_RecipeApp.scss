@@ -11,6 +11,7 @@
     }
     &__search {
         margin: 15px auto;
+        position: relative;
         form {
             @include flex-center;
             flex-direction: row;
@@ -23,10 +24,9 @@
                 box-shadow: 5px 5px 10px #c2c2c2, 
                             -5px -5px 10px #ffffff;
                 text-shadow: none;
-                overflow-x: hidden;
+                outline: none;
             }
         }
-
     }
     &__center-btn {
         display: flex;
@@ -80,4 +80,9 @@
             padding: 1px;
         }
     }
+}
+
+.recipes-loader {
+    margin-top: 80px;
+    position: relative;
 }

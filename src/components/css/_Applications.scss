@@ -1,6 +1,7 @@
 .applications {
     @include flex-center;
     margin: 0 auto;
+    overflow-x: hidden;
     &__title {
         width: 100%;
         text-align: center;
@@ -16,6 +17,7 @@
         margin-bottom: 20px;
         color: #fff;
         width: 90%;
+        max-width: 95%;
         &__face {
             height: 70px;
             transition: .5s;
