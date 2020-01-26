@@ -1269,9 +1269,9 @@ section .technologies-container h3 {
   color: #5cb85c;
   font-weight: 300;
   letter-spacing: 0.05rem;
-  -webkit-transition: .5s;
-  transition: .5s;
-  margin-top: -120px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  margin-top: -145px;
 }
 
 form {
@@ -1317,15 +1317,14 @@ textarea {
 .submit-form {
   background-color: transparent;
   padding: 10px 60px;
-  margin: 20px 0;
+  margin: 20px 0 100px 0;
   font-size: 16px;
   text-transform: uppercase;
   border: 2px solid rgba(255, 255, 255, 0.5);
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.1rem;
-  -webkit-transition: .5s;
-  transition: .5s;
-  margin-bottom: 100px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   cursor: pointer;
 }
 
