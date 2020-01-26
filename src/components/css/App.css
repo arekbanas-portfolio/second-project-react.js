@@ -202,7 +202,7 @@ html {
 }
 
 .header {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   position: relative;
   overflow-x: hidden;
@@ -232,7 +232,7 @@ html {
 }
 
 .header h2 {
-  margin-top: 30vh;
+  margin-top: 25vh;
   font-size: 1.8rem;
 }
 
@@ -734,7 +734,7 @@ main .type-writer {
   letter-spacing: 0.1rem;
   margin: 3vh 5%;
   opacity: 0;
-  min-height: 250px;
+  min-height: 260px;
 }
 
 main .type-writer.active {
@@ -1487,17 +1487,18 @@ textarea {
 }
 
 .footer-content__socials li a::before {
-  content: '';
+  content: "";
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   width: 45px;
   height: 45px;
-  background-color: rgba(0, 0, 0, 0.3);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  border-radius: 50%;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 @media (min-width: 576px) {
