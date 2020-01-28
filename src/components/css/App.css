@@ -128,13 +128,18 @@ html {
 .nav-container .main-nav .menu.active li {
   visibility: visible;
   opacity: 1;
+  color: rgba(255, 255, 255, 0.5);
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
 
+.nav-container .main-nav .menu.active li:nth-of-type(1) {
+  color: white;
+}
+
 .nav-container .main-nav .menu.active li > .active {
-  font-size: 1.2rem;
-  opacity: .4;
+  font-size: 1.54rem;
+  color: white;
   pointer-events: none;
 }
 
@@ -142,7 +147,7 @@ html {
   list-style-type: none;
   padding: 25px 0;
   visibility: hidden;
-  opacity: .2;
+  opacity: .4;
   -webkit-transform: translateY(15px);
           transform: translateY(15px);
   -webkit-transition: all .3s linear;
@@ -1587,6 +1592,7 @@ textarea {
     line-height: 60px;
     letter-spacing: 0.1rem;
     z-index: 1;
+    color: rgba(255, 255, 255, 0.5);
   }
   .nav-container .main-nav li.active {
     -webkit-transform: translateY(0);
@@ -1596,9 +1602,8 @@ textarea {
     display: none;
   }
   .nav-container .main-nav li > .active {
-    font-size: 0.7rem !important;
-    opacity: .4;
-    pointer-events: none;
+    font-size: 1.07692rem !important;
+    color: white;
   }
   main .type-writer {
     min-height: 140px;
