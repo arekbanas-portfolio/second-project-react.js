@@ -119,7 +119,7 @@ handleCitySubmit = (e) => {
                     placeholder="Wpisz miasto"
                     value={value}
                     onChange={this.handleInputChange}/>
-                    <button className="button active">Wyszukaj</button>
+                    <button className="button weather-button">Wyszukaj</button>
                 </form>
                 <div className="weather-app__result">
                     {city !== '' && error ? `Brak informacji o: ${city}` : content}

@@ -55,29 +55,15 @@ class App extends Component {
     return (
       <>
       {this.state.loading ? <SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/> : <div className="app">
-        <nav>
           {<Navigation click={this.toggleHamburger} active={this.state.active}/>}
-        </nav>
-        <header>
           {<Header opacity={this.changeOpacity}/>}
-        </header>
-        <div className="desktop-wrapper">
-        <main>
-          {<About/>}
+        <main className="desktop-wrapper">
+          <About/>
+          <Technologies/>
+          <Applications/>
+          <Contact/>
+          <Footer/>
         </main>
-        <section>
-          {<Technologies/>}
-        </section>
-        <section>
-          {<Applications/>}
-        </section>
-        <section>
-          {<Contact/>}
-        </section>
-        <footer>
-          {<Footer/>}
-        </footer>
-        </div>
       </div>}
       </>
     )

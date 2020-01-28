@@ -4,7 +4,7 @@ class About extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          text: 'Witam, mam na imię Arek. Chciałbym zacząć prację jako Junior Front-End Developer. Jest to mój drugi projekt wykonany przy użyciu biblioteki React. W niedalekiej przyszłości, myślę zrobić tą stronę dwujęzyczna, oraz oczywiście dołożyć nowe aplikacje. Jeżeli zainteresował Cię mój projekt zapraszam do kontaktu. Pozdrawiam.',
+          text: 'Jestem Arek. Moim celem jest zostać Junior Front-End Developerem. Oto mój drugi projekt wykonany przy użyciu biblioteki React - niebawem ulepszę go o wersję w języku angielskim oraz z pewnością rozbuduję o nowe aplikacje. Jeżeli widzisz we mnie potencjał - zapraszam do kontaktu.',
           index: 0,
           show: '',
           cursor: '|',
@@ -27,7 +27,7 @@ class About extends Component {
     addSection = () => {
       const sectionAbout = document.querySelector('.about-container');
       
-      if(window.scrollY > sectionAbout.offsetTop + 200) {
+      if(window.scrollY > sectionAbout.offsetTop - 400) {
         this.setState({
           section: true,
         })
@@ -63,16 +63,17 @@ class About extends Component {
     render() {
       const {show, active, cursor, section} = this.state;
         return ( 
-            <main className='about-container'>
-                <div className={section ? 'my-image active' : 'my-image'}>
+            <div className='about-container'>
+                <picture className={section ? 'my-image active' : 'my-image'}>
                   <span className={section ? 'border-image active' : 'border-image'}>
                   </span>
-                </div>
-                <div className={section ? 'type-writer active' : 'type-writer'}>{show}
+                </picture>
+                <article className={section ? 'type-writer active' : 'type-writer'}>{show}
                   <span className={active ? 'cursor active' : 'cursor'}>{cursor}</span>
-                </div>
-                <div className="first-project"><a href="http://www.arekbanas-portfolio.cba.pl">PIERWSZY PROJEKT (jQuery)</a></div>
-            </main>
+                </article>
+                <button className="first-project"><a href="http://www.arekbanas-portfolio.cba.pl">PIERWSZY PROJEKT (jQuery)</a>
+                </button>
+            </div>
         );
     }
 }

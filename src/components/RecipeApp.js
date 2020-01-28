@@ -74,7 +74,7 @@ class RecipeApp extends Component {
                     <input type="text" name="recipeName" placeholder="chicken, salat..."/>
                     <input type="number" name="quantity" placeholder="how much recipes?"/>
                     <div className="recipe-app__center-btn">
-                    <button className="recipe-app__button">SEARCH</button>
+                    <button className="recipe-app__button recipe-app__btn">SEARCH</button>
                     </div>
                 </form>
             </div>

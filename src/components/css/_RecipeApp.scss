@@ -36,7 +36,6 @@
     &__button {
         display: block;
         margin: 15px auto;
-        padding: 10px 50px;
         background: transparent;
         border: 2px solid rgba(0,0,0,0.8);
         color: rgba(0,0,0,0.8);
@@ -44,9 +43,14 @@
         letter-spacing: $letter-spacing;
         cursor: pointer;
         a {
+            display: block;
             text-decoration: none;
             color: inherit;
+            padding: 10px 50px;
         }
+    }
+    &__btn {
+        padding: 10px 50px;
     }
     &__recipes {
         @include flex-center;

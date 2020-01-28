@@ -1,4 +1,4 @@
-main {
+.about-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -6,8 +6,8 @@ main {
     .my-image {
         background-image: url(../images/me.jpg);
         margin: 30px 50px 25px auto;
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
         background-position: center;
         background-size: cover;
         border-radius: 50%;
@@ -15,11 +15,10 @@ main {
         opacity: 0;
         z-index: 1000;
         position: relative;
-        transform: translateX(10px);
+        transform: translate3d(10px,0,0);
         &.active {
             opacity: 1;
-            box-shadow: -15px 0px 20px 5px rgba(0,0,0,0.6);
-            transform: translateX(0);
+            transform: translate3d(0,0,0);
         }
         .border-image {
             position: absolute;
@@ -30,14 +29,14 @@ main {
             background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
             opacity: 0;
             visibility: hidden;
-            transform: translateX(30px);
+            transform: translate3d(30px,0,0);
             border-radius: 10px;
             transition: all 1s ease-in-out;
             transition-delay: -.1s;
             &.active {
                 opacity: 1;
                 visibility: visible;
-                transform: translateX(0);
+                transform: translate3d(0,0,0);
             }
         }
 
@@ -47,19 +46,21 @@ main {
         letter-spacing: $letter-spacing;
         margin: 3vh 5%;
         opacity: 0;
-        min-height: 260px;
+        min-height: 240px;
         &.active {
             opacity: 1;
         }
     }
     .first-project {
         background-image: $gradient;
+        border: none;
         text-align: center;
         margin: 20px auto 35px auto;
-        padding: 10px 20px;
         border-radius: 5px;
         display: inline-block;
         a {
+            display: block;
+            padding: 10px 20px;
             text-decoration: none;
             color:#fff;
             font-size: $small-device-h2 / 2;
