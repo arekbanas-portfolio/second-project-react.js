@@ -69,7 +69,7 @@ class Footer extends Component {
                         </li>
                     </ul>
                     
-                    <h5 className="footer-content__copyright">Arkadiusz Banaś &copy;. Wszelkie prawa zastrzeżone</h5>
+                    <h4 className="footer-content__copyright">Arkadiusz Banaś &copy;. Wszelkie prawa zastrzeżone</h4>
                 </div>
             </footer>
          );

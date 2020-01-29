@@ -41,7 +41,7 @@
 .footer-content {
     text-align: center;
     z-index: 1;
-    h2, h5 {
+    h2, h4 {
         @include white-fontstyle;
     }
     h2 {
@@ -52,13 +52,14 @@
             text-decoration: none;
         }
     }
-    h5 {
+    h4 {
         letter-spacing: 0;
         position: absolute;
         bottom: 10px;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
+        font-size: $small-device-h4;
     }
     &__socials {
         display: flex;

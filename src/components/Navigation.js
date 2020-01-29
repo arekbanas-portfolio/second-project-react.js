@@ -3,20 +3,20 @@ import {Link} from "react-scroll";
 
 const Navigation = (props) => {
     return (
-        <nav>
+        <nav aria-labelledby="main-nav" role="navigation">
             <div>
-                <div onClick={props.click} className={props.active ? 'hamburger active' : 'hamburger'}>
+                <button onClick={props.click} className={props.active ? 'hamburger active' : 'hamburger'}>
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
             <div className={props.active ? 'nav-container active' : 'nav-container'}>
                 <div className="main-nav">
                     <ul className={props.active ? 'menu active' : 'menu'}>
                         <li>MENU</li>
                         <span className={props.active ? 'border active' : 'border'}></span>
-                        <li><Link onClick={props.click}
+                        <li role="presentation"><Link onClick={props.click}
                             activeClass="active"
                             to="header"
                             spy={true}
@@ -24,7 +24,7 @@ const Navigation = (props) => {
                             offset={-100}
                             duration= {1000}>
                         STRONA GŁÓWNA</Link></li>
-                        <li><Link onClick={props.click}
+                        <li role="presentation"><Link onClick={props.click}
                             activeClass="active"
                             to="about-container"
                             spy={true}
@@ -32,7 +32,7 @@ const Navigation = (props) => {
                             offset={-100}
                             duration= {1000}>
                         O MNIE</Link></li>
-                        <li><Link onClick={props.click}
+                        <li role="presentation"><Link onClick={props.click}
                             activeClass="active"
                             to="applications"
                             spy={true}
@@ -40,7 +40,7 @@ const Navigation = (props) => {
                             offset={-100}
                             duration= {1000}>
                         APLIKACJE</Link></li>
-                        <li><Link onClick={props.click}
+                        <li role="presentation"><Link onClick={props.click}
                             activeClass="active"
                             to="form-contact-wrapper"
                             spy={true}
