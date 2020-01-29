@@ -19,6 +19,9 @@
         filter: blur(5px);
     }
     &.active {
+        &::before {
+            display: none;
+        }
         transform: rotate(-90deg);
         span {
         &:nth-child(1) {

@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
+import {gsap} from 'gsap/dist/gsap';
 
 class About extends Component {
     constructor(props) {
         super(props);
+        this.myImage = null;
+        this.border = null;
+        
         this.state = {
           text: 'Jestem Arek. Moim celem jest zostać Junior Front-End Developerem. Oto mój drugi projekt wykonany przy użyciu biblioteki React - niebawem ulepszę go o wersję w języku angielskim oraz z pewnością rozbuduję o nowe aplikacje. Jeżeli widzisz we mnie potencjał - zapraszam do kontaktu.',
           index: 0,
@@ -28,10 +32,16 @@ class About extends Component {
       const sectionAbout = document.querySelector('.about-container');
       
       if(window.scrollY > sectionAbout.offsetTop - 400) {
+        gsap.to(this.myImage, {x: -10, opacity: 1, duration: 1});
+        gsap.to(this.border, {x: -30, opacity: 1, duration: .5})
+
         this.setState({
           section: true,
         })
       } else {
+        gsap.to(this.myImage, {x: 0, opacity: 0, duration: .5});
+        gsap.to(this.border, {x: 0, opacity: 0, duration: .5})
+        
         this.setState({
           section: false,
           show: '',
@@ -64,8 +74,8 @@ class About extends Component {
       const {show, active, cursor, section} = this.state;
         return ( 
             <div className='about-container'>
-                <picture className={section ? 'my-image active' : 'my-image'}>
-                  <span className={section ? 'border-image active' : 'border-image'}>
+                <picture ref={picture => this.myImage = picture}className='my-image'>
+                  <span ref={span => this.border = span} className='border-image'>
                   </span>
                 </picture>
                 <article className={section ? 'type-writer active' : 'type-writer'}>{show}

@@ -7,6 +7,7 @@
 
 html {
   font-family: 'Open Sans', sans-serif;
+  font-display: swap;
 }
 
 .container {
@@ -42,6 +43,10 @@ html {
 .hamburger.active {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+.hamburger.active::before {
+  display: none;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -684,51 +689,27 @@ html {
 
 .about-container .my-image {
   background-image: url(../images/me.jpg);
-  margin: 30px 50px 25px auto;
+  margin: 30px 60px 25px auto;
   width: 180px;
   height: 180px;
   background-position: center;
   background-size: cover;
   border-radius: 50%;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
   opacity: 0;
   z-index: 1000;
   position: relative;
-  -webkit-transform: translate3d(10px, 0, 0);
-          transform: translate3d(10px, 0, 0);
-}
-
-.about-container .my-image.active {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
 }
 
 .about-container .my-image .border-image {
   position: absolute;
   bottom: -20px;
-  right: 0;
+  right: -30px;
   width: 220px;
   height: 5px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.8)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
   opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translate3d(30px, 0, 0);
-          transform: translate3d(30px, 0, 0);
   border-radius: 10px;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -webkit-transition-delay: -.1s;
-          transition-delay: -.1s;
-}
-
-.about-container .my-image .border-image.active {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
 }
 
 .about-container .type-writer {
@@ -1426,17 +1407,7 @@ textarea {
 
 .footer-content h2 {
   font-size: 1.8rem;
-  opacity: 0;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-.footer-content h2.active {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  margin: 20px 0;
 }
 
 .footer-content h2 a {
@@ -1461,20 +1432,7 @@ textarea {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 30px 0;
-  opacity: 0;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
-}
-
-.footer-content__socials.active {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  margin: 30px 0 20px 0;
 }
 
 .footer-content__socials li {

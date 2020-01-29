@@ -5,41 +5,25 @@
     background-color: #fff;
     .my-image {
         background-image: url(../images/me.jpg);
-        margin: 30px 50px 25px auto;
+        margin: 30px 60px 25px auto;
         width: 180px;
         height: 180px;
         background-position: center;
         background-size: cover;
         border-radius: 50%;
-        transition: all 1s ease-in-out;
         opacity: 0;
         z-index: 1000;
         position: relative;
-        transform: translate3d(10px,0,0);
-        &.active {
-            opacity: 1;
-            transform: translate3d(0,0,0);
-        }
         .border-image {
             position: absolute;
             bottom: -20px;
-            right: 0;
+            right: -30px;
             width: 220px;
             height: 5px;
             background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
             opacity: 0;
-            visibility: hidden;
-            transform: translate3d(30px,0,0);
             border-radius: 10px;
-            transition: all 1s ease-in-out;
-            transition-delay: -.1s;
-            &.active {
-                opacity: 1;
-                visibility: visible;
-                transform: translate3d(0,0,0);
-            }
         }
-
     }
     .type-writer {
         font-size: 17px;
