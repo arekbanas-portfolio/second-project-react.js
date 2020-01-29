@@ -10,10 +10,6 @@ class Footer extends Component {
             this.phoneNumber = null;
             this.socials = null;
             this.tl = new TimelineLite({paused: true});
-
-            this.state = {
-                active: false
-            }
     }
 
     componentDidMount() {
@@ -42,23 +38,15 @@ class Footer extends Component {
         if ((window.innerWidth >= 768 && window.innerWidth <= 992) && window.scrollY > footerSection.offsetTop -600 || (window.scrollY > footerSection.offsetTop - 420 || window.scrollY > footerSection.offsetTop - 500)) {
             gsap.to(this.phoneNumber, {y: -20, opacity: 1, duration: 1, delay: .5})
             gsap.to(this.socials, {y: -20, opacity: 1, duration: 1, delay: 1})
-            this.tl.resume();
             
-            this.setState({
-                active: true
-            })
+            this.tl.resume();
         } else {
             gsap.to(this.phoneNumber, {y: 0, opacity: 0, duration: 1, delay: .5})
             gsap.to(this.socials, {y: 0, opacity: 0, duration: 1, delay: 1})
-            
-            this.setState({
-                active: false
-            })
         }
     }
     
     render() {
-        const {active} = this.state; 
         return (
             <footer className="footer">
                 <div>
