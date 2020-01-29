@@ -19,11 +19,11 @@
         max-width: 95%;
         &__face {
             height: 70px;
-            transition: .5s;
+            transition: all .5s;
         }
         &__content {
             opacity: .5;
-            transform: .5s;
+            transition: all .5s;
             &.active {
                 opacity: 1;
             }
