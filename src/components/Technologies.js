@@ -56,10 +56,10 @@ class Technologies extends Component {
 
         return ( 
             <section className="technologies-container">
-                <h2>Technologie:</h2>
-                <h3>{this.state.show}
+                <h1>Technologie:</h1>
+                <h2>{this.state.show}
                 <span className={active ? 'cursor active' : 'cursor'}>{cursor}</span>
-                </h3>
+                </h2>
                 <video src={BackgroundVideo} autoPlay loop playsInline muted>
                 </video>
             </section>

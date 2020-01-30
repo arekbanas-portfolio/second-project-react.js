@@ -3,7 +3,7 @@ import {Link} from "react-scroll";
 
 const Navigation = (props) => {
     return (
-        <nav aria-labelledby="main-nav" role="navigation">
+        <nav aria-labelledby="mainNav" role="navigation">
             <div>
                 <button onClick={props.click} className={props.active ? 'hamburger active' : 'hamburger'}>
                     <span></span>

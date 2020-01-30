@@ -35,7 +35,7 @@ class Applications extends Component {
         return ( 
             <section className="applications">
                 <div className="applications__title">
-                    <h2>Aplikacje:</h2>
+                    <h1>Aplikacje:</h1>
                 </div>
                 <div className="card">
                     <div onClick={this.toggleApp} className={activeApp ? "card__face card__face1 active" : "card__face card__face1"}>
@@ -54,14 +54,14 @@ class Applications extends Component {
                 <div className="card">
                     <div onClick={this.toggleApp2} className={activeApp2 ? "card__face card__face1 active" : "card__face card__face1"}>
                         <div className={activeApp2 ? "card__content active" : "card__content"}>
-                                <h3>Recipe App</h3>
+                            <h3>Recipe App</h3>
                         </div>
                     </div>
                     <div className={activeApp2 ? "card__face card__face2 active" : "card__face card__face2"}>
                         <div className={activeApp2 ? "card__content active" : "card__content"}>
                             <p>Wyszukiwarka przepisów również korzystająca z API. (wer. ANG)</p>
                             <button className="button">
-                                    <Link to="/recipe-app">WEJDŹ</Link>
+                                <Link to="/recipe-app">WEJDŹ</Link>
                             </button>
                         </div>
                     </div>

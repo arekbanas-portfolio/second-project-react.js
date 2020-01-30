@@ -4,10 +4,10 @@
     &__title {
         width: 100%;
         text-align: center;
-        h2 {
-            @include h2-title;
+        h1 {
+            @include h1-title;
             display: inline-block;
-            font-size: $small-device-h2 * 1.1;
+            font-size: $small-device-h1 * 1.1;
         }
     }
     .card {
@@ -35,11 +35,11 @@
                 letter-spacing: $letter-spacing;
                 z-index: 1;
                 cursor: pointer;
-                transform: translate3d(0,35px,0);
+                transform: translate3d(0px,35px,0px);
                 box-shadow: 0 20px 30px rgba(0,0,0,0.6);
                 overflow-x: hidden;
                 &.active {
-                    transform: translate3d(0,0,0);
+                    transform: translate3d(0px,0px,0px);
                     box-shadow: none;
                 }
         }
@@ -49,11 +49,11 @@
                 @include flex-center;
                 height: 70px;
                 padding: 20px;
-                transform: translate3d(0,-35px,0);
+                transform: translate3d(0px,-35px,0px);
                 opacity: 0;
                 overflow-x: hidden;
                 &.active {
-                    transform: translate3d(0,0,0);
+                    transform: translate3d(0px,0px,0px);
                     opacity: 1;
                     height: auto;
                 }

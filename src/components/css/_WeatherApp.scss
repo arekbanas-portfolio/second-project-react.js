@@ -22,8 +22,8 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        h2 {
-            font-size: $small-device-h2 / 1.5;
+        h1 {
+            font-size: $small-device-h1 / 1.5;
             font-weight: $normal-font;
             border-bottom: none;
             margin: 20px 0 45px 0;
@@ -32,14 +32,14 @@
         div {
             min-width: 50%;
             padding: 5px 0;
-            h3 {
-                font-size: $small-device-h3 / 1.4;
+            h2 {
+                font-size: $small-device-h2 / 1.4;
                 font-weight: $normal-font;
             }
-            h4 {
+            h3 {
                 color: #5cb85c;
                 font-weight: inherit;
-                font-size: $small-device-h3 / 1.6;
+                font-size: $small-device-h2 / 1.6;
             }
         }
     }

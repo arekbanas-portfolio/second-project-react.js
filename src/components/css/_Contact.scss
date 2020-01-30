@@ -9,17 +9,17 @@
     background-image: $gradient;
     clip-path: polygon(0 12.5%, 100% 0, 100% 87.5%, 0% 100%);
     color: rgba(255,255,255,.5);
-    h2 {
-        @include h2-title;
+    h1 {
+        @include h1-title;
         margin-top: 100px;
         border-bottom: 2px solid rgba(255,255,255,.5);
     }
-    h3 {
+    h2 {
         color: $correct-color;
         font-weight: $normal-font;
         letter-spacing: $letter-spacing / 2;
         transition: all .5s ease-in-out;
-        margin-top: -145px;
+        margin-top: -150px;
     }
 }
 
@@ -52,6 +52,7 @@ input, textarea {
 
 textarea {
     margin-top: 5px;
+    min-height: 60px;
     font-family: 'Open Sans', sans-serif;
 }
 

@@ -66,8 +66,8 @@ class RecipeApp extends Component {
         return ( 
             <> 
             <div className="recipe-app">
-                <h2>Recipe App</h2>
-                <h3>When entering the appropriate ingredient, sample recipes will be shown accordingly. The API is from a foreign server, also the names must be in English.</h3>
+                <h1>Recipe App</h1>
+                <h2>When entering the appropriate ingredient, sample recipes will be shown accordingly. The API is from a foreign server, also the names must be in English.</h2>
             </div>
             <div className="recipe-app__search">
                 <form onSubmit={this.getRecipe}>
@@ -87,8 +87,8 @@ class RecipeApp extends Component {
                                 <img 
                                 src={`https://spoonacular.com/recipeImages/${recipe.id}-312x231.jpg`} 
                                 alt={recipe.title}/>
-                                <h4>{recipe.title.length > 20 ? recipe.title.substr(0,20) + "..." : recipe.title}</h4>
-                                <p>Ready in minutes: {recipe.readyInMinutes}</p>
+                                <h3>{recipe.title.length > 20 ? recipe.title.substr(0,20) + "..." : recipe.title}</h3>
+                                <p>Preparation time: {recipe.readyInMinutes > 60 ? Math.floor(recipe.readyInMinutes / 60) + " h" + ", " + recipe.readyInMinutes % 60 + " mins" : recipe.readyInMinutes + " mins"}</p>
                                 <p>Servings: {recipe.servings}</p>
                                 <button className="recipe-app__button">
                                     <Link to={`/recipe/${recipe.id}`}>SHOW MORE
@@ -99,7 +99,7 @@ class RecipeApp extends Component {
                         } else {
                             return (
                             <div className="recipe recipe__error">
-                                <h4>CONNECTING ERROR!</h4>
+                                <h3>CONNECTING ERROR!</h3>
                             </div>
                             )
                         }

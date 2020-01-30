@@ -56,20 +56,20 @@ class Footer extends Component {
                 </div>
                 
                 <div className="footer-content">
-                    <h2 ref={h2 => this.phoneNumber = h2} className="footer-content__phone-number">
+                    <h1 ref={h1 => this.phoneNumber = h1} className="footer-content__phone-number">
                     <a href="tel:+48790737819">+48 790737819</a>
-                    </h2>
+                    </h1>
                     
                     <ul ref={ul => this.socials = ul} className="footer-content__socials">
-                        <li><a href="https://www.facebook.com/arek.banas.9?ref=bookmarks"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                        <li><a name="facebook" href="https://www.facebook.com/arek.banas.9?ref=bookmarks"><i className="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
-                        <li><a href="https://www.linkedin.com/in/arek-bana%C5%9B-6071a8180/"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <li><a name="facebook" href="https://www.linkedin.com/in/arek-bana%C5%9B-6071a8180/"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
-                        <li><a href="https://github.com/arekbanas-portfolio?tab=repositories"><i className="fa fa-github" aria-hidden="true"></i></a>
+                        <li><a name="facebook" href="https://github.com/arekbanas-portfolio?tab=repositories"><i className="fa fa-github" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                     
-                    <h4 className="footer-content__copyright">Arkadiusz Banaś &copy;. Wszelkie prawa zastrzeżone</h4>
+                    <h3 className="footer-content__copyright">Arkadiusz Banaś &copy;. Wszelkie prawa zastrzeżone</h3>
                 </div>
             </footer>
          );

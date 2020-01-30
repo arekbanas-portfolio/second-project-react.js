@@ -96,16 +96,16 @@ handleCitySubmit = (e) => {
                 <div>
                     {loader ? <div className="loader">
                         <SemipolarLoading color="rgba(255,255,255,0.8)" size="large"/></div> : <div className="weather-app__content">
-                        <h2>Pogoda dla: {result}</h2>
+                        <h1>Pogoda dla: {result}</h1>
                         <img src={iconurl} alt={icon_alt} className="weather-app__icon"/>
-                        <div><h3>Wschód słońca:</h3><h4>{sunriseTime}</h4></div>
-                        <div><h3>Zachód słońca:</h3><h4>{sunsetTime}</h4></div>
-                        <div><h3>Temperatura:</h3><h4>{temperature} &deg;C</h4></div>
-                        <div><h3>Odczuwalna:</h3><h4>{temperature_feels} &deg;C</h4></div>
-                        <div><h3>Temp. min.:</h3><h4>{temperature_min} &deg;C</h4></div>
-                        <div><h3>Temp. max:</h3><h4>{temperature_max} &deg;C</h4></div>
-                        <div><h3>Ciśnienie:</h3><h4>{pressure} hPa</h4></div>
-                        <div><h3>Wiatr:</h3><h4>{windSpeed} km/h</h4></div>
+                        <div><h2>Wschód słońca:</h2><h3>{sunriseTime}</h3></div>
+                        <div><h2>Zachód słońca:</h2><h3>{sunsetTime}</h3></div>
+                        <div><h2>Temperatura:</h2><h3>{temperature} &deg;C</h3></div>
+                        <div><h2>Odczuwalna:</h2><h3>{temperature_feels} &deg;C</h3></div>
+                        <div><h2>Temp. min.:</h2><h3>{temperature_min} &deg;C</h3></div>
+                        <div><h2>Temp. max:</h2><h3>{temperature_max} &deg;C</h3></div>
+                        <div><h2>Ciśnienie:</h2><h3>{pressure} hPa</h3></div>
+                        <div><h2>Wiatr:</h2><h3>{windSpeed} km/h</h3></div>
                     </div>}
                 </div>
             )

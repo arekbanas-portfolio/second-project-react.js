@@ -1,13 +1,13 @@
 .recipe-app {
     background-image: $gradient;
-    h2, h3 {
+    h1, h2 {
         @include white-fontstyle;
         padding: 10px 20px;
         text-align: center;
     }
-    h3 {
+    h2 {
         letter-spacing: $letter-spacing;
-        font-size: $small-device-h3 / 1.5;
+        font-size: $small-device-h2 / 1.5;
     }
     &__search {
         margin: 15px auto;

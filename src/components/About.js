@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import myImg from './images/me.jpg';
 import {gsap} from 'gsap/dist/gsap';
 
 class About extends Component {
@@ -74,12 +75,13 @@ class About extends Component {
       const {show, active, cursor, section} = this.state;
         return ( 
             <div className='about-container'>
-                <picture ref={picture => this.myImage = picture}className='my-image'>
+                <picture className='my-image'>
+                  <img ref={img => this.myImage = img} src={myImg} alt="My Image"/>
                   <span ref={span => this.border = span} className='border-image'>
                   </span>
                 </picture>
-                <article className={section ? 'type-writer active' : 'type-writer'}>{show}
-                  <span className={active ? 'cursor active' : 'cursor'}>{cursor}</span>
+                <article className={section ? 'type-writer active' : 'type-writer'}>     <p>{show}<span className={active ? 'cursor active' : 'cursor'}>        {cursor}</span>
+                  </p>
                 </article>
                 <button className="first-project"><a href="http://www.arekbanas-portfolio.cba.pl">PIERWSZY PROJEKT (jQuery)</a>
                 </button>

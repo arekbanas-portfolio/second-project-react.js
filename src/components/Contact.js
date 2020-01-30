@@ -104,7 +104,7 @@ class Contact extends Component {
             <section>
                 <div className="form-contact-wrapper">
                     <div className="form-contact">
-                    <h2>Formularz kontaktowy:</h2>
+                    <h1>Formularz kontaktowy:</h1>
                         <form onSubmit={this.handleSubmit} noValidate>
                             <label htmlFor="user">Imię:
                             <input type="text" id="user" name="username" value={this.state.username} onChange={this.handleChange}/>
@@ -123,7 +123,7 @@ class Contact extends Component {
 
                             <button className="submit-form">Wyślij</button>
                         </form>
-                        {this.state.send && <h3>{this.state.send}</h3>}
+                        {this.state.send && <h2>{this.state.send}</h2>}
                     </div>
                 </div>
                 <div className="contact-waves">

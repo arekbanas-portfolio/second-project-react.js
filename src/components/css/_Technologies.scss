@@ -12,18 +12,18 @@
         left: 50%;
         transform: translate(-50%,-50%);
     }
-    h2, h3 {
+    h1, h2 {
         position: absolute;
         top: 45%;
         left: 50%;
         transform: translate(-50%,-50%);
         color: #fff;
         z-index: 1;
-        font-size: $small-device-h2 * 1.2;
+        font-size: $small-device-h1 * 1.2;
         @include white-fontstyle;
     }
-    h3 {
+    h2 {
         top: 70%;
-        font-size: $small-device-h3 * 1.2;
+        font-size: $small-device-h2 * 1.2;
     }
 }
