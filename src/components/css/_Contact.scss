@@ -17,6 +17,7 @@
     h2 {
         color: $correct-color;
         font-weight: $normal-font;
+        font-size: $small-device-h2 / 1.4;
         letter-spacing: $letter-spacing / 2;
         transition: all .5s ease-in-out;
         margin-top: -150px;
@@ -52,7 +53,7 @@ input, textarea {
 
 textarea {
     margin-top: 5px;
-    min-height: 60px;
+    min-height: 70px;
     font-family: 'Open Sans', sans-serif;
 }
 
