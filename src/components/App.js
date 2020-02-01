@@ -8,25 +8,21 @@ import Technologies from './Technologies';
 import Applications from './Applications';
 import Contact from './Contact';
 import Footer from './Footer';
+import { Preloader, Placeholder } from 'react-preloading-screen';
 
 class App extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        loading: true,
         active: false,
       }
   }
 
   componentDidMount() {
-    this.handleLoading = setTimeout(() => this.setState({loading: false}), 1500);
     window.addEventListener("scroll", this.changeOpacity);
   }
 
   componentWillUnmount() {
-    if(this.handleLoading) {
-      clearInterval(this.handleLoading);
-    }
     window.removeEventListener("scroll", this.changeOpacity);
   }
 
@@ -54,7 +50,8 @@ class App extends Component {
   render() {
     return (
       <>
-      {this.state.loading ? <SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/> : <div className="app">
+      <div className="app">
+        <Preloader>
         {<Navigation click={this.toggleHamburger} active={this.state.active}/>}
         {<Header opacity={this.changeOpacity}/>}
         <main className="desktop-wrapper">
@@ -64,6 +61,10 @@ class App extends Component {
           <Contact/>
         </main>
         <Footer/>
+        <Placeholder>
+          <span><SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/></span>
+        </Placeholder>
+        </Preloader>
       </div>}
       </>
     )
