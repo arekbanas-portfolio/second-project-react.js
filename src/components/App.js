@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './css/App.css';
-import { SemipolarLoading } from 'react-loadingg';
 import Header from './Header';
 import Navigation from './Navigation';
 import About from './About';
@@ -8,6 +7,7 @@ import Technologies from './Technologies';
 import Applications from './Applications';
 import Contact from './Contact';
 import Footer from './Footer';
+import { LoopCircleLoading } from 'react-loadingg';
 import { Preloader, Placeholder } from 'react-preloading-screen';
 
 class App extends Component {
@@ -49,7 +49,6 @@ class App extends Component {
 
   render() {
     return (
-      <>
       <Preloader>
       <div className="app">
         {<Navigation click={this.toggleHamburger} active={this.state.active}/>}
@@ -63,10 +62,9 @@ class App extends Component {
         <Footer/>
       </div>
       <Placeholder>
-        <span><SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/></span>
+        <span><LoopCircleLoading color="rgba(0,0,0,0.8)" size="large"/></span>
       </Placeholder>
       </Preloader>
-      </>
     )
   }
 }
