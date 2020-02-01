@@ -3,12 +3,15 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import App from './App';
 import RecipeApp from './RecipeApp';
 import Recipe from './Recipe';
-import { LoopCircleLoading } from 'react-loadingg';
+import { SemipolarLoading } from 'react-loadingg';
 import { Preloader, Placeholder } from 'react-preloading-screen';
 
 const Router = () => {
     return (
         <Preloader>
+        <Placeholder>
+        <span><SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/></span>
+        </Placeholder>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
                 <Route path="/" exact component={App}/>
@@ -16,9 +19,6 @@ const Router = () => {
                 <Route path="/recipe/:id" component={Recipe}/>
             </Switch>
         </BrowserRouter>
-        <Placeholder>
-        <span><LoopCircleLoading color="rgba(0,0,0,0.8)" size="large"/></span>
-        </Placeholder>
         </Preloader>
      );
 }
