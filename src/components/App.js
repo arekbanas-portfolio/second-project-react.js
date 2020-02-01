@@ -7,8 +7,6 @@ import Technologies from './Technologies';
 import Applications from './Applications';
 import Contact from './Contact';
 import Footer from './Footer';
-import { LoopCircleLoading } from 'react-loadingg';
-import { Preloader, Placeholder } from 'react-preloading-screen';
 
 class App extends Component {
   constructor(props) {
@@ -49,7 +47,6 @@ class App extends Component {
 
   render() {
     return (
-      <Preloader>
       <div className="app">
         {<Navigation click={this.toggleHamburger} active={this.state.active}/>}
         {<Header opacity={this.changeOpacity}/>}
@@ -60,11 +57,7 @@ class App extends Component {
           <Contact/>
         </main>
         <Footer/>
-      </div>
-      <Placeholder>
-        <span><LoopCircleLoading color="rgba(0,0,0,0.8)" size="large"/></span>
-      </Placeholder>
-      </Preloader>
+      </div> 
     )
   }
 }
