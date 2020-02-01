@@ -50,8 +50,8 @@ class App extends Component {
   render() {
     return (
       <>
+      <Preloader>
       <div className="app">
-        <Preloader>
         {<Navigation click={this.toggleHamburger} active={this.state.active}/>}
         {<Header opacity={this.changeOpacity}/>}
         <main className="desktop-wrapper">
@@ -61,11 +61,11 @@ class App extends Component {
           <Contact/>
         </main>
         <Footer/>
-        <Placeholder>
-          <span><SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/></span>
-        </Placeholder>
-        </Preloader>
-      </div>}
+      </div>
+      <Placeholder>
+        <span><SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/></span>
+      </Placeholder>
+      </Preloader>
       </>
     )
   }
