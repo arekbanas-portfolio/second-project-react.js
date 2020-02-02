@@ -49,7 +49,7 @@ componentDidMount() {
                             <i className="fa fa-check" aria-hidden="true"></i>
                             : <i className="fa fa-times" aria-hidden="true"></i>}</h5>
                         </div>
-                        <h4>Preparation time: {recipe.readyInMinutes > 60 ? Math.floor(recipe.readyInMinutes / 60) + " h" + ", " + recipe.readyInMinutes % 60 + " mins" : recipe.readyInMinutes + " mins"}</h4>
+                        <h4>Preparation time: {recipe.readyInMinutes > 60 ? Math.floor(recipe.readyInMinutes / 60) + " h, " + recipe.readyInMinutes % 60 + " mins" : recipe.readyInMinutes + " mins"}</h4>
                         <div className="ingredients">
                             <h4>Extended Ingredients:</h4>
                             {ingredients.map(ingredient => {

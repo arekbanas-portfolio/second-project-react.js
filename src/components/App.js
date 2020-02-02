@@ -7,21 +7,42 @@ import Technologies from './Technologies';
 import Applications from './Applications';
 import Contact from './Contact';
 import Footer from './Footer';
+import { SemipolarLoading } from 'react-loadingg';
 
 class App extends Component {
   constructor(props) {
       super(props);
       this.state = {
         active: false,
+        loader: undefined
       }
   }
 
   componentDidMount() {
+    document.addEventListener("readystatechange", this.showContent);
     window.addEventListener("scroll", this.changeOpacity);
   }
 
   componentWillUnmount() {
+    document.removeEventListener("readystatechange", this.showContent);
     window.removeEventListener("scroll", this.changeOpacity);
+  }
+
+  showContent = () => {
+    switch (document.readyState) {
+      case "interactive":
+        this.setState({
+          loader: true
+        })
+        break;
+      case "complete":
+        this.setState({
+          loader: false
+        })
+        break;
+      default:
+        break;
+    }
   }
 
   changeOpacity = (props) => {
@@ -47,7 +68,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
+      <>
+      {this.state.loader ? <SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/> : <div className="app">
         {<Navigation click={this.toggleHamburger} active={this.state.active}/>}
         {<Header opacity={this.changeOpacity}/>}
         <main className="desktop-wrapper">
@@ -57,7 +79,8 @@ class App extends Component {
           <Contact/>
         </main>
         <Footer/>
-      </div> 
+      </div>}
+      </>
     )
   }
 }

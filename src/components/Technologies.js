@@ -22,6 +22,7 @@ class Technologies extends Component {
 
     componentWillUnmount() {
         clearInterval(this.typeWriter);
+        clearInterval(this.cursorTyping);
     }
 
     addLetter = () => {

@@ -35,7 +35,7 @@ class Footer extends Component {
         this.tl.to(this.lightning, 1, {opacity: .4, delay: 2}, 'run');
         this.tl.to(this.lightning, 1, {opacity: 0, delay: -1.7},);
 
-        if ((window.innerWidth >= 768 && window.innerWidth <= 992) && window.scrollY > footerSection.offsetTop -600 || (window.scrollY > footerSection.offsetTop - 420 || window.scrollY > footerSection.offsetTop - 500)) {
+        if ((window.innerWidth >= 768 && window.innerWidth <= 992 && window.scrollY > footerSection.offsetTop -600) || window.scrollY > footerSection.offsetTop - 420 || window.scrollY > footerSection.offsetTop - 500) {
             gsap.to(this.phoneNumber, {y: -20, opacity: 1, duration: 1, delay: .5})
             gsap.to(this.socials, {y: -20, opacity: 1, duration: 1, delay: 1})
             
@@ -61,11 +61,11 @@ class Footer extends Component {
                     </h1>
                     
                     <ul ref={ul => this.socials = ul} className="footer-content__socials">
-                        <li><a name="facebook" href="https://www.facebook.com/arek.banas.9?ref=bookmarks"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                        <li><a name="facebook" href="https://www.facebook.com/arek.banas.9?ref=bookmarks"><i className="fa fa-facebook"></i></a>
                         </li>
-                        <li><a name="facebook" href="https://www.linkedin.com/in/arek-bana%C5%9B-6071a8180/"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <li><a name="facebook" href="https://www.linkedin.com/in/arek-bana%C5%9B-6071a8180/"><i className="fa fa-linkedin"></i></a>
                         </li>
-                        <li><a name="facebook" href="https://github.com/arekbanas-portfolio?tab=repositories"><i className="fa fa-github" aria-hidden="true"></i></a>
+                        <li><a name="facebook" href="https://github.com/arekbanas-portfolio?tab=repositories"><i className="fa fa-github"></i></a>
                         </li>
                     </ul>
                     

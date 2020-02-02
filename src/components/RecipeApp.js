@@ -88,7 +88,7 @@ class RecipeApp extends Component {
                                 src={`https://spoonacular.com/recipeImages/${recipe.id}-312x231.jpg`} 
                                 alt={recipe.title}/>
                                 <h3>{recipe.title.length > 20 ? recipe.title.substr(0,20) + "..." : recipe.title}</h3>
-                                <p>Preparation time: {recipe.readyInMinutes > 60 ? Math.floor(recipe.readyInMinutes / 60) + " h" + ", " + recipe.readyInMinutes % 60 + " mins" : recipe.readyInMinutes + " mins"}</p>
+                                <p>Preparation time: {recipe.readyInMinutes > 60 ? Math.floor(recipe.readyInMinutes / 60) + " h, " + recipe.readyInMinutes % 60 + " mins" : recipe.readyInMinutes + " mins"}</p>
                                 <p>Servings: {recipe.servings}</p>
                                 <button className="recipe-app__button">
                                     <Link to={`/recipe/${recipe.id}`}>SHOW MORE

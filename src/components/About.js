@@ -27,6 +27,7 @@ class About extends Component {
     componentWillUnmount() {
       window.removeEventListener('scroll', this.addSection);
       clearInterval(this.typeWriter);
+      clearInterval(this.cursorTyping);
     }
 
     addSection = () => {
@@ -76,7 +77,7 @@ class About extends Component {
         return ( 
             <div className='about-container'>
                 <picture className='my-image'>
-                  <img ref={img => this.myImage = img} src={myImg} alt="My Image"/>
+                  <img ref={img => this.myImage = img} src={myImg} alt="Me"/>
                   <span ref={span => this.border = span} className='border-image'>
                   </span>
                 </picture>
