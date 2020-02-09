@@ -75,7 +75,52 @@
         font-size: $small-device-h2;
         letter-spacing: $letter-spacing;
         font-weight: $normal-font;
-        text-shadow: $text-shadow;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+        &__select-lng {
+            display: block;
+            position: relative;
+            opacity: .4;
+            visibility: hidden;
+            transform: translate3d(0px,15px,0px);
+            transition: all .3s linear;
+            transition-delay: .45s;
+            &.active {
+                visibility: visible;
+                opacity: 1;
+                transform: translate3d(0px,0px,0px);
+            }
+            .fa {
+                position: absolute;
+                top: 35.5px;
+                left: 95px;
+                font-size: 25px;
+            }
+            select {
+                position: absolute;
+                left: 30px;
+                top: 22.5px;
+                width: 100px;
+                height: 50px;
+                padding: 0 10px;
+                font-size: $small-device-h1;
+                letter-spacing: $letter-spacing;
+                background: rgba(255,255,255,.2);
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+                color: #fff;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                appearance: none;
+                cursor: pointer;
+                option {
+                    font-size: $small-device-h2 / 1.5;
+                    font-weight: $bold-font;
+                    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+                    font-family: 'Open Sans', sans-serif;
+                    display: none;
+                }
+            }
+        }
         .menu {
             display: flex;
             flex-direction: column;
@@ -137,7 +182,7 @@
             margin: 0 auto;
             transition: all .3s ease;
             z-index: 100;
-            box-shadow: 2px 2px 2px #000;
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
             &.active {
                 width: 60%;
                 transition-delay: .5s;

@@ -7,7 +7,7 @@ import Technologies from './Technologies';
 import Applications from './Applications';
 import Contact from './Contact';
 import Footer from './Footer';
-import { SemipolarLoading } from 'react-loadingg';
+import { SemipolarLoading } from 'react-loadingg'
 
 class App extends Component {
   constructor(props) {
@@ -46,9 +46,9 @@ class App extends Component {
   }
 
   changeOpacity = (props) => {
-    const header = document.querySelector("header");
+    let header = document.querySelector(".header");
     let scrollPosition = window.scrollY;
-    const height = header.offsetHeight;
+    let height = header.offsetHeight;
     let calc = 1 - scrollPosition / height;
 
     header.style.opacity = calc;
@@ -60,9 +60,20 @@ class App extends Component {
     }
   }
   
-  toggleHamburger = () => {
+  toggleHamburger = (props) => {
     this.setState({
       active: !this.state.active
+    })
+  }
+
+  hideSelected = (props) => {
+    const options = document.querySelectorAll("option")
+    options.forEach(option => {
+      if (option.selected) {
+        option.style.display = "none"
+      } else {
+        option.style.display = "block"
+      }
     })
   }
 
@@ -70,7 +81,7 @@ class App extends Component {
     return (
       <>
       {this.state.loader ? <SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/> : <div className="app">
-        {<Navigation click={this.toggleHamburger} active={this.state.active}/>}
+        {<Navigation click={this.toggleHamburger} active={this.state.active} hide={this.hideSelected}/>}
         {<Header opacity={this.changeOpacity}/>}
         <main className="desktop-wrapper">
           <About/>

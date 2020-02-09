@@ -1,33 +1,23 @@
 import React, {Component} from 'react';
 import myImg from './images/me.jpg';
 import {gsap} from 'gsap/dist/gsap';
+import { Translation } from 'react-i18next';
 
 class About extends Component {
     constructor(props) {
         super(props);
         this.myImage = null;
         this.border = null;
-        
-        this.state = {
-          text: 'Jestem Arek. Moim celem jest zostać Junior Front-End Developerem. Oto mój drugi projekt wykonany przy użyciu biblioteki React - niebawem ulepszę go o wersję w języku angielskim oraz z pewnością rozbuduję o nowe aplikacje. Jeżeli widzisz we mnie potencjał - zapraszam do kontaktu.',
-          index: 0,
-          show: '',
-          cursor: '|',
-          active: false,
-          section: false,
-        }
+        this.content = null;
+        this.btn = null;
     }
       
     componentDidMount() {
       window.addEventListener('scroll', this.addSection);
-      this.typeWriter = setInterval(this.addLetter, 30);
-      this.cursorTyping = setInterval(this.cursorAnimation, 500);
     }
       
     componentWillUnmount() {
       window.removeEventListener('scroll', this.addSection);
-      clearInterval(this.typeWriter);
-      clearInterval(this.cursorTyping);
     }
 
     addSection = () => {
@@ -35,45 +25,27 @@ class About extends Component {
       
       if(window.scrollY > sectionAbout.offsetTop - 400) {
         gsap.to(this.myImage, {x: -10, opacity: 1, duration: 1});
-        gsap.to(this.border, {x: -30, opacity: 1, duration: .5})
-
-        this.setState({
-          section: true,
-        })
+        gsap.to(this.border, {x: -30, opacity: 1, duration: .5});
       } else {
         gsap.to(this.myImage, {x: 0, opacity: 0, duration: .5});
-        gsap.to(this.border, {x: 0, opacity: 0, duration: .5})
-        
-        this.setState({
-          section: false,
-          show: '',
-          index: 0,
-        })
+        gsap.to(this.border, {x: 0, opacity: 0, duration: .5});
       }
-    }  
-      
-    addLetter = () => {
-      const index = this.state.index;
-      const letter = this.state.text.charAt(index);
-      const textlength = this.state.text.length;
-      
-        if(index <= textlength) {
-          this.setState({
-            show: this.state.show + letter,
-            index: index + 1,
-        })
-      }
-    }
 
-    cursorAnimation = () => {
-        this.setState({
-        cursor: this.state.cursor,
-        active: !this.state.active,
-      })
+      if(window.scrollY > sectionAbout.offsetTop - 300) {
+        gsap.to(this.content, {x: 0, opacity: 1, duration: 1});
+      } else {
+        gsap.to(this.content, {x: -10, opacity: 0, duration: .5});
+      }
+
+      if(window.scrollY > sectionAbout.offsetTop - 200) {
+        gsap.to(this.btn, {y: 0, opacity: 1, duration: 1});
+      } else {
+        gsap.to(this.btn, {y: 10, opacity: 0, duration: .5});
+      }
     }
+    
 
     render() {
-      const {show, active, cursor, section} = this.state;
         return ( 
             <div className='about-container'>
                 <picture className='my-image'>
@@ -81,10 +53,13 @@ class About extends Component {
                   <span ref={span => this.border = span} className='border-image'>
                   </span>
                 </picture>
-                <article className={section ? 'type-writer active' : 'type-writer'}>     <p>{show}<span className={active ? 'cursor active' : 'cursor'}>        {cursor}</span>
-                  </p>
+                <article className='type-writer' ref={article => this.content = article}>
+                  <Translation>{t => <p>{t('about-me')}</p>}
+                  </Translation>
                 </article>
-                <button className="first-project"><a href="http://www.arekbanas-portfolio.cba.pl">PIERWSZY PROJEKT (jQuery)</a>
+                <button ref={button => this.btn = button} className="first-project">
+                  <a href="http://www.arekbanas-portfolio.cba.pl">
+                  <Translation>{t => <>{t('first-project')}</>}</Translation></a>
                 </button>
             </div>
         );

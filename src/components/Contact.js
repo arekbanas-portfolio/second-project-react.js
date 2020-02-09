@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Translation } from 'react-i18next';
 
 class Contact extends Component {
     constructor(props) {
@@ -19,9 +20,12 @@ class Contact extends Component {
          }
 
          this.messages = {
-             username_incorrect: 'Nazwa użytkownika musi mieć conajmniej 3 znaki.',
-             email_incorrect: 'Podano nieprawidłowy adres email.',
-             message_incorrect: 'Wiadomosć musi mieć conajmniej 5 znaków'
+             username_incorrect: <Translation>{t => <>{t('valid-name')}</>}
+             </Translation>,
+             email_incorrect: <Translation>{t => <>{t('valid-email')}</>}
+             </Translation>,
+             message_incorrect: <Translation>{t => <>{t('valid-message')}</>}
+             </Translation>,
          }
 
          this.handleChange = (e) => {
@@ -40,7 +44,8 @@ class Contact extends Component {
                     username: '',
                     email: '',
                     message: '',
-                    send: 'Formularz został wysłany!',
+                    send: <Translation>{t => <>{t('sent-msg')}</>}
+                    </Translation>,
 
                     errors: {
                         username: false,
@@ -104,9 +109,14 @@ class Contact extends Component {
             <section>
                 <div className="form-contact-wrapper">
                     <div className="form-contact">
-                    <h1>Formularz kontaktowy:</h1>
+                    <h1>
+                        <Translation>{t => <>{t('form')}</>}
+                        </Translation>
+                    </h1>
                         <form onSubmit={this.handleSubmit} noValidate>
-                            <label htmlFor="user">Imię:
+                            <label htmlFor="user">
+                            <Translation>{t => <>{t('name')}</>}
+                            </Translation>
                             <input type="text" id="user" name="username" value={this.state.username} onChange={this.handleChange}/>
                             {this.state.errors.username && <span className="error">{this.messages.username_incorrect}</span>}
                             </label>
@@ -116,12 +126,17 @@ class Contact extends Component {
                             {this.state.errors.email && <span className="error">{this.messages.email_incorrect}</span>}
                             </label>
                             
-                            <label htmlFor="message">Wiadomość:
+                            <label htmlFor="message">
+                            <Translation>{t => <>{t('message')}</>}
+                            </Translation>
                             <textarea type="text" id="message" name="message" value={this.state.message} onChange={this.handleChange}/>
                             {this.state.errors.message && <span className="error">{this.messages.message_incorrect}</span>}
                             </label>
 
-                            <button className="submit-form">Wyślij</button>
+                            <button className="submit-form">
+                                <Translation>{t => <>{t('send')}</>}
+                                </Translation>
+                            </button>
                         </form>
                         {this.state.send && <h2>{this.state.send}</h2>}
                     </div>

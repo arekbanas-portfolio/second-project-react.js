@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import WeatherApp from './WeatherApp';
 import {Link} from 'react-router-dom';
+import { Translation } from 'react-i18next';
 
 class Applications extends Component {
     constructor(props) {
@@ -35,18 +36,19 @@ class Applications extends Component {
         return ( 
             <section className="applications">
                 <div className="applications__title">
-                    <h1>Aplikacje:</h1>
+                    <Translation>{t => <h1>{t('app')}</h1>}</Translation>
                 </div>
                 <div className="card">
                     <div onClick={this.toggleApp} className={activeApp ? "card__face card__face1 active" : "card__face card__face1"}>
                         <div className={activeApp ? "card__content active" : "card__content"}>
-                            <h3>POGODOWA</h3>
+                            <Translation>{t => <h3>{t('weather-app')}</h3>}
+                            </Translation>
                         </div>
                     </div>
                     <div className={activeApp ? "card__face card__face2 active" : "card__face card__face2"}>
                         <div className={activeApp ? "card__content active" : "card__content"}>
-                            {showApp ? <WeatherApp/> : <p>Aplikacja pogodowa, wykorzystująca dane z API.</p>}
-                            <button className="button weather-button" onClick={this.handleShow}>{showApp ? "UKRYJ" : "POKAŻ"}
+                            {showApp ? <WeatherApp/> : <Translation>{t => <p>{t('weather-app-content')}</p>}</Translation>}
+                            <button className="button weather-button" onClick={this.handleShow}>{showApp ? <Translation>{t => <>{t('hide')}</>}</Translation> : <Translation>{t => <>{t('show')}</>}</Translation>}
                             </button>
                         </div>
                     </div>
@@ -54,14 +56,19 @@ class Applications extends Component {
                 <div className="card">
                     <div onClick={this.toggleApp2} className={activeApp2 ? "card__face card__face1 active" : "card__face card__face1"}>
                         <div className={activeApp2 ? "card__content active" : "card__content"}>
-                            <h3>Recipe App</h3>
+                            <Translation>{t => <h3>{t('recipe-app')}</h3>}
+                            </Translation>
                         </div>
                     </div>
                     <div className={activeApp2 ? "card__face card__face2 active" : "card__face card__face2"}>
                         <div className={activeApp2 ? "card__content active" : "card__content"}>
-                            <p>Wyszukiwarka przepisów również korzystająca z API. (wer. ANG)</p>
+                            <Translation>{t => <p>{t('recipe-app-content')}
+                            </p>}</Translation>
                             <button className="button">
-                                <Link to="/recipe-app">WEJDŹ</Link>
+                                <Link to="/recipe-app">
+                                    <Translation>{t => <>{t('show')}</>}
+                                    </Translation>
+                                </Link>
                             </button>
                         </div>
                     </div>

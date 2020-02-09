@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {gsap, TimelineLite, Power1} from 'gsap/dist/gsap';
+import { Translation } from 'react-i18next';
 
 class Footer extends Component {
     constructor(props) {
@@ -69,7 +70,10 @@ class Footer extends Component {
                         </li>
                     </ul>
                     
-                    <h3 className="footer-content__copyright">Arkadiusz Banaś &copy;. Wszelkie prawa zastrzeżone</h3>
+                    <h3 className="footer-content__copyright">
+                        <Translation>{t => <>{t('copy')}</>}
+                        </Translation>
+                    </h3>
                 </div>
             </footer>
          );

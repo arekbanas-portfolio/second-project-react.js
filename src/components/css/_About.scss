@@ -28,11 +28,7 @@
     }
     .type-writer {
         margin: 3vh 10%;
-        opacity: 0;
-        min-height: 260px;
-        &.active {
-            opacity: 1;
-        }
+        min-height: 230px;
         p {
             font-size: 17px;
             letter-spacing: $letter-spacing;

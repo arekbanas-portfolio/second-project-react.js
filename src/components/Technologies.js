@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import BackgroundVideo from './images/Forest.mp4'
+import BackgroundVideo from './images/Forest.mp4';
+import { Translation } from 'react-i18next';
 
 class Technologies extends Component {
     constructor(props) {
@@ -57,7 +58,7 @@ class Technologies extends Component {
 
         return ( 
             <section className="technologies-container">
-                <h1>Technologie:</h1>
+                <Translation>{t => <h1>{t('technologies')}</h1>}</Translation>
                 <h2>{this.state.show}
                 <span className={active ? 'cursor active' : 'cursor'}>{cursor}</span>
                 </h2>

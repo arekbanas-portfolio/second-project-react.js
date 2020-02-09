@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { SemipolarLoading } from 'react-loadingg';
+import { Translation } from 'react-i18next';
 
 class WeatherApp extends Component {
     constructor(props) {
@@ -96,16 +97,39 @@ handleCitySubmit = (e) => {
                 <div>
                     {loader ? <div className="loader">
                         <SemipolarLoading color="rgba(255,255,255,0.8)" size="large"/></div> : <div className="weather-app__content">
-                        <h1>Pogoda dla: {result}</h1>
+                        <h1>
+                        <Translation>{t => <>{t('weather')}</>}
+                        </Translation>{result}
+                        </h1>
                         <img src={iconurl} alt={icon_alt} className="weather-app__icon"/>
-                        <div><h2>Wschód słońca:</h2><h3>{sunriseTime}</h3></div>
-                        <div><h2>Zachód słońca:</h2><h3>{sunsetTime}</h3></div>
-                        <div><h2>Temperatura:</h2><h3>{temperature} &deg;C</h3></div>
-                        <div><h2>Odczuwalna:</h2><h3>{temperature_feels} &deg;C</h3></div>
-                        <div><h2>Temp. min.:</h2><h3>{temperature_min} &deg;C</h3></div>
+                        <div>
+                        <Translation>{t => <h2>{t('sunrise')}</h2>}
+                        </Translation><h3>{sunriseTime}</h3>
+                        </div>
+                        <div>
+                        <Translation>{t => <h2>{t('sunset')}</h2>}
+                        </Translation><h3>{sunsetTime}</h3>
+                        </div>
+                        <div>
+                        <Translation>{t => <h2>{t('temperature')}</h2>}
+                        </Translation><h3>{temperature} &deg;C</h3>
+                        </div>
+                        <div>
+                        <Translation>{t => <h2>{t('feels')}</h2>}
+                        </Translation><h3>{temperature_feels} &deg;C</h3>
+                        </div>
+                        <div>
+                        <h2>Temp. min.:</h2><h3>{temperature_min} &deg;C</h3>
+                        </div>
                         <div><h2>Temp. max:</h2><h3>{temperature_max} &deg;C</h3></div>
-                        <div><h2>Ciśnienie:</h2><h3>{pressure} hPa</h3></div>
-                        <div><h2>Wiatr:</h2><h3>{windSpeed} km/h</h3></div>
+                        <div>
+                        <Translation>{t => <h2>{t('pressure')}</h2>}
+                        </Translation><h3>{pressure} hPa</h3>
+                        </div>
+                        <div>
+                        <Translation>{t => <h2>{t('wind')}</h2>}
+                        </Translation><h3>{windSpeed} km/h</h3>
+                        </div>
                     </div>}
                 </div>
             )
@@ -115,14 +139,17 @@ handleCitySubmit = (e) => {
             <div className="weather-app">
                 <form onSubmit={this.handleCitySubmit}>
                     <input 
-                    type="text" 
-                    placeholder="Wpisz miasto"
+                    type="text"
                     value={value}
                     onChange={this.handleInputChange}/>
-                    <button className="button weather-button">Wyszukaj</button>
+                    <button className="button weather-button">
+                        <Translation>{t => <>{t('search')}</>}
+                        </Translation>
+                    </button>
                 </form>
                 <div className="weather-app__result">
-                    {city !== '' && error ? `Brak informacji o: ${city}` : content}
+                    {city !== '' && error ? 
+                    <Translation>{t => <>{t('no-informations')} {city}</>}</Translation> : content}
                 </div>
             </div>
 
