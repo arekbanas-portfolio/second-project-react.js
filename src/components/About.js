@@ -23,7 +23,7 @@ class About extends Component {
     addSection = () => {
       const sectionAbout = document.querySelector('.about-container');
       
-      if(window.scrollY > sectionAbout.offsetTop - 400) {
+      if(window.scrollY > sectionAbout.offsetTop - 350) {
         gsap.to(this.myImage, {x: -10, opacity: 1, duration: 1});
         gsap.to(this.border, {x: -30, opacity: 1, duration: .5});
       } else {
@@ -31,13 +31,13 @@ class About extends Component {
         gsap.to(this.border, {x: 0, opacity: 0, duration: .5});
       }
 
-      if(window.scrollY > sectionAbout.offsetTop - 300) {
+      if(window.scrollY > sectionAbout.offsetTop - 200) {
         gsap.to(this.content, {x: 0, opacity: 1, duration: 1});
       } else {
         gsap.to(this.content, {x: -10, opacity: 0, duration: .5});
       }
 
-      if(window.scrollY > sectionAbout.offsetTop - 200) {
+      if(window.scrollY > sectionAbout.offsetTop - 100) {
         gsap.to(this.btn, {y: 0, opacity: 1, duration: 1});
       } else {
         gsap.to(this.btn, {y: 10, opacity: 0, duration: .5});
