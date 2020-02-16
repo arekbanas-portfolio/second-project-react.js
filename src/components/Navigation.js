@@ -16,8 +16,8 @@ const Navigation = (props) => {
             <div className={props.active ? 'nav-container active' : 'nav-container'}>
                 <div className="main-nav">
                     <div className={props.active ? "main-nav__select-lng active" : "main-nav__select-lng"}>
-                        <i className="fa fa-language"></i>
-                        <select onClick={props.hide}>
+                        <i className="fa fa-angle-down"></i>
+                        <select onChange={props.hide}>
                             <option className="option1" onClick={() => i18n.changeLanguage('pl')}>PL</option>
                             <option className="option2" onClick={() => i18n.changeLanguage('en')}>EN</option>
                         </select>

@@ -101,6 +101,10 @@
                     left: 10px;
                     font-size: $small-device-h2;
                     background-image: $gradient;
+                    option {
+                        font-size: $small-device-h2 / 1.2;
+                        background-color: rgb(39, 101, 99);
+                    }
                 }
             }
             .border {
@@ -244,6 +248,12 @@
     .form-contact-wrapper {
         width: 70%;
         margin: 0 auto;
+    }
+    .contact-waves {
+        .header__wave {
+            height: 50px;
+            background-size: 500px 50px;
+        }
     }
     .footer {
         width: 70%;

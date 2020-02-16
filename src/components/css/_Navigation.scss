@@ -113,11 +113,7 @@
                 border-radius: 10px;
                 appearance: none;
                 cursor: pointer;
-                option {
-                    font-size: $small-device-h2 / 1.5;
-                    font-weight: $bold-font;
-                    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
-                    font-family: 'Open Sans', sans-serif;
+                option:nth-of-type(1) {
                     display: none;
                 }
             }
