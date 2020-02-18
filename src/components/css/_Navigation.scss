@@ -78,43 +78,39 @@
         font-weight: $normal-font;
         text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
         &__select-lng {
-            display: block;
-            position: relative;
+            display: flex;
+            left: 30px;
+            top: 22.5px;
+            position: absolute;
             opacity: .4;
             visibility: hidden;
             transform: translate3d(0px,15px,0px);
             transition: all .3s linear;
             transition-delay: .45s;
+            pointer-events: none;
             &.active {
                 visibility: visible;
                 opacity: 1;
                 transform: translate3d(0px,0px,0px);
             }
-            .fa {
-                position: absolute;
-                top: 35.5px;
-                left: 95px;
-                font-size: 25px;
-            }
-            select {
-                position: absolute;
-                left: 30px;
-                top: 22.5px;
-                width: 100px;
+            button {
+                width: 50px;
                 height: 50px;
-                padding: 0 10px;
-                font-size: $small-device-h1;
-                letter-spacing: $letter-spacing;
-                background: rgba(255,255,255,.2);
-                box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-                color: #fff;
+                margin: 0 5px;
+                background: none;
                 border: none;
                 outline: none;
-                border-radius: 10px;
-                appearance: none;
                 cursor: pointer;
-                option:nth-of-type(1) {
-                    display: none;
+                pointer-events: all;
+                font-size: $small-device-h2 * 1.1;
+                font-weight: $normal-font;
+                letter-spacing: $letter-spacing;
+                color: rgba(255,255,255,.5);
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+                &.active {
+                    font-size: $small-device-h1;
+                    color: #fff;
+                    pointer-events: none;
                 }
             }
         }
@@ -143,7 +139,7 @@
         }
         li {
             list-style-type: none;
-            padding: 25px 0;
+            padding: 20px 0;
             visibility: hidden;
             opacity: .4;
             transform: translate3d(0px,15px,0px);

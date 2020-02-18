@@ -66,13 +66,14 @@ class App extends Component {
     })
   }
 
-  hideSelected = (props) => {
-    const options = document.querySelectorAll("option")
-    options.forEach(option => {
-      if (option.selected) {
-        option.style.display = "none"
+  selectLanguage = (props) => {
+    const buttons = document.querySelectorAll(".main-nav__select-lng button");
+
+    buttons.forEach(button => {
+      if (button.className == "active") {
+        button.classList.remove("active");
       } else {
-        option.style.display = "block"
+        button.classList.add("active");
       }
     })
   }
@@ -81,7 +82,7 @@ class App extends Component {
     return (
       <>
       {this.state.loader ? <SemipolarLoading color="rgba(0,0,0,0.8)" size="large"/> : <div className="app">
-        {<Navigation click={this.toggleHamburger} active={this.state.active} hide={this.hideSelected}/>}
+        {<Navigation click={this.toggleHamburger} active={this.state.active} select={this.selectLanguage}/>}
         {<Header opacity={this.changeOpacity}/>}
         <main className="desktop-wrapper">
           <About/>

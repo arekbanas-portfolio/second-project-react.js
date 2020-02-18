@@ -114,28 +114,28 @@
         background-size: 500px 50px;
     }
     &__wave1 {
-        animation: waving 30s linear infinite;
+        animation: waving 30s linear infinite alternate;
         z-index: 100;
         opacity: 1;
         animation-delay: 0s;
         bottom: 0;
     }
     &__wave2 {
-        animation: waving2 25s linear infinite;
+        animation: waving2 25s linear infinite alternate;
         z-index: 99;
         opacity: .5;
         animation-delay: -5s;
         bottom: 5px;
     }
     &__wave3 {
-        animation: waving3 15s linear infinite;
+        animation: waving3 15s linear infinite alternate;
         z-index: 98;
         opacity: .3;
         animation-delay: -7s;
         bottom: 13px;
     }
     &__wave4 {
-        animation: waving4 15s linear infinite;
+        animation: waving4 15s linear infinite alternate;
         z-index: 97;
         opacity: .7;
         animation-delay: -3s;
@@ -146,7 +146,7 @@
             background-position-x: 0;
         }
         100% {
-            background-position-x: 500px;
+            background-position-x: 1000px;
         }
     }
     @keyframes waving2 {
@@ -154,12 +154,12 @@
             background-position-x: 0;
         }
         100% {
-            background-position-x: -500px;
+            background-position-x: -1000px;
         }
     }
     @keyframes waving3 {
         0% {
-            background-position-x: -500px;
+            background-position-x: -1000px;
         }
         100% {
             background-position-x: 0;
@@ -167,7 +167,7 @@
     }
     @keyframes waving4 {
         0% {
-            background-position-x: 500px;
+            background-position-x: 1000px;
         }
         100% {
             background-position-x: 0;
